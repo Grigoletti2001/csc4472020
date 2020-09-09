@@ -228,4 +228,58 @@ on the heap.
 https://gribblelab.org/CBootCamp/7_Memory_Stack_vs_Heap.html#:~:text=them%2C%20is%20running-,The%20Heap,are%20built%2Din%20C%20functions.
 
 
-The Heap. The heap is a region of your computer's memory that is not managed automatically for you, and is not as tightly managed by the CPU. It is a more free-floating region of memory (and is larger). To allocate memory on the heap, you must use malloc() or calloc() , which are built-in C functions.
+The Heap. The heap is a region of your computer's memory that is not managed automatically for you, and is not as 
+tightly managed by the CPU. It is a more free-floating region of memory (and is larger). To allocate memory on the heap,
+ you must use malloc() or calloc() , which are built-in C functions.
+
+
+5.5 Call-stack allocation. 
+Consider the following C program.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void countdown (int n) {
+  if (n <= 0) {
+    printf ("done\n");
+  } else {
+    printf ("counting down\n");
+    countdown (n - 1);
+  }
+}
+
+int main () {
+  countdown (5);
+}
+//prints
+* see screen shot* 
+1. counting down
+counting down
+counting down
+counting down
+counting down
+done
+
+
+2. 
+There are at least 8 activation records on the call stack when done is printed by printf. There may be more since we do not know the implementation of printf.
+main
+count with n = 5
+count with n = 4
+count with n = 3
+count with n = 2
+count with n = 1
+count with n = 0
+printf
+
+5.6 
+first program is fine. 
+second is bad because p is a dangling pinter after foo returns. 
+
+"The first program is fine.
+
+The second program is problematic because p is a dangling pointer after foo returns. That is, p contains a 
+pointer to an area of memory that is not defined, and when it is dereferenced (using *p) the behavior is not guaranteed: 
+it might be 10, some other value, or crash the program. This happens because the result variable is allocated in the activation record for foo, 
+and the address of result is returned from foo, but the activation record for foo is deallocated (hence the memory storing result
+ is also deallocated) when foo returns." per james riley
