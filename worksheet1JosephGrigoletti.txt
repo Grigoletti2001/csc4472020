@@ -43,3 +43,22 @@ Environment variables can be changed or unset, but they can also be augmented.
  If your search path is set up in /etc/profile, you can redefine it in your local .profile or 
  add to it with a command like this:
 
+3.5 Per the instructions... installing the requested env vars
+
+
+// trouble getting baz to display. 
+
+➜  ~ echo ${FOO}
+
+➜  ~ export FOO=bar
+➜  ~ echo ${FOO}
+bar
+➜  ~ Foo=baz
+➜  ~ echo ${FOO}
+bar
+➜  ~ Foo=baz
+➜  ~ echo ${FOO}
+bar
+➜  ~ unset FOO 
+➜  ~ echo ${FOO}
+
