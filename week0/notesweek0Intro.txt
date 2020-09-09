@@ -1,0 +1,78 @@
+Introduction Email: 
+Hello.  I'm writing because you are enrolled in CSC447 for Fall.  
+
+Welcome!
+
+We will be entirely online this quarter, using a mix of Youtube, 
+Zoom, Discord and D2L to communicate.  Our first Zoom meeting 
+will be next Wednesday.  The class is now activated on D2L.
+
+To make sure you are prepared for next week, I've made 
+a 28 minute introduction to the class.  In it, I will introduce the
+ format of the class and walk through the syllabus.  Please watch 
+ this video as soon as is convenient: https://www.youtube.com/watch?v=eA4H0hru5X0
+
+There are some additional things to look over before next Wednesday. 
+ Watch the video for more details.
+
+Looking forward to meeting you!
+
+Best wishes,
+
+James
+--------
+
+https://d2l.depaul.edu/d2l/home/772949
+
+
+5:45 wed. via zoom. recordings on youtube
+Lectures: 
+https://fpl.cs.depaul.edu/jriely/courses/csc447/schedule.html 
+slides 
+
+https://www.youtube.com/playlist?list=PL75YXG7TYNRKHzVmFT2Lh34hMNZ44idSv  Playlist. 
+
+** use closed captioning. (table of contents )
+
+
+Watch lecture via youtube before wed. class. 
+
+Link to zoom classroom: https://depaul.zoom.us/j/96108707251
+
+Discussion forum: https://discord.gg/PgbmXWd
+csc 447 server 
+
+
+Weekly checklist:
+attend lecture (see D2L for recordings)
+reading from textbooks (see table above for chapter details)
+worksheet (see table above)
+worksheet quiz (this is just a checkbox, see D2L)
+homework submission (see D2L)
+quiz (see D2L)
+
+reveal.js
+
+hands on: write many programs and experiments: Scala as main language 
+-scala textbook is excellent. 
+-No IDE. 
+-Worksheet for commandprompt. 
+- 
+Syllabus --> 
+https://fpl.cs.depaul.edu/jriely/courses/csc447/assets/syllabus.pdf
+
+exams multiple choice and cumilative 
+
+* worksheets + homework. quizes. 
+
+homework on d2l 
+
+LEARNING GOALS
+Learn PLs more easily by recognizing concepts
+"it has while loops"
+"it has closures"
+"it has list comprehensions"
+"it has dynamic dispatch using vtables"
+"it has mixins"
+
+Instead, become familiar with a range of tools and build systems

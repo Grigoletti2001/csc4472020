@@ -1,0 +1,190 @@
+https://www.youtube.com/watch?v=t3YDFw5iuMo&list=PL75YXG7TYNRKHzVmFT2Lh34hMNZ44idSv&index=2
+Lisp & Scheme 
+Lisp (LISt Processor)--> influenctial PL from the 1950s. 
+Motivated by logic/AI apps. 
+* created by McCarthy 
+Created to play Chess. an alternative to fortran (for scientific computation). Both high level languages. 
+fortran= scientific/ military. 
+lisp for AI. pioneer for new programming languages. Created/pionnered many PL concepts like: 
+    1. automatic garbage collection. *Java/js
+    2. first -class, highorder, nested functions. 
+    read-eval, print loop, including runtime compilations "eval". 
+    3. Run things interactively. 
+    4. Sophicated macro system (muchg more sojphisticated thabn modern ones.)
+    5. multiple dispatch/multiple-methods. New way of introducing methods. 
+===> dialects Common lisp, sheme, clojure, Racket (most modern). 
+
+===> we will use scheme. been around a long time and well supported. 
+Joke: lots of infuriating & silly parentheses.  LISP 
+repl.it (does not support rational numbers. convert to decimal? )
+*repl.it or homebrew on mac. 
+* download MIT/GNU-scheme & sisc-scheme.  sisc-scheme is what we will be using in the course. 
+ (commands: sisc--> sisc scheme uses java based interpreter..  & scheme--> mit version)
+
+
+ SISC is an extensible Java based interpreter of the algorithmic language Scheme. 
+ SISC uses modern interpretation techniques, and handily outperforms all existing JVM interpreters (often by more than an order of magnitude).
+
+Differences and standards: 
+http://community.schemewiki.org/?scheme-faq-standards
+
+**interface (FFI) to the native language to scheme interpreter/compiler. 
+Most Schemes support a so-called "foreign function interface" (FFI) to the native language (i.e. the language in which the Scheme interpreter/compiler was implemented). FFIs provide the following features:
+
+Calling native code from Scheme
+The most basic FFIs allow you to write functions/methods following certain conventions and then call these native functions/methods from Scheme. Conversion libraries are provided for converting Scheme types to native types and visa versa and/or to explicitly construct instances of native types in Scheme. More advanced FFIs can call any native function/method, with implicit argument/result conversion taking place.
+
+Calling Scheme from native code
+At the basic level, FFIs provides a means by which to call eval with a string containing a Scheme expression. Some FFIs support the programmatic constructions of Scheme objects and expressions, the traversal of Scheme data structures and the invocation of Scheme functions/closures that have been constructed at the native level or were passed in a call from Scheme to native code.
+
+
+Tail recursion
+--------------------
+Scheme syntax: 
+Number literal: 5
+String Literal : "hello world"
+Symbol: 'helloworld
+
+Arithmetic in Scheme: 
+https://www.cs.cmu.edu/Groups/AI/html/r4rs/r4rs_6.html
+
+; (1+2)*3 =  // in scheme would be coded as.... 
+
+(* (+ 1 2) 3) // remember the order of operations and use logic. test the spaces. 
+#;>9    ///output of 9 
+
+//lets play with the spacing.... 
+{warning: compiler detected application of non-procedure '1'.)
+Error: attempt to apply non-procedure '1'.
+{warning: printing of stack trace not supported}
+
+
+course lecture exercise: 
+SISC (1.16.6)
+#;> (+ 10 5 2)
+17
+
+#;> (- 10 5 2)  //I tried it with & without a space after the 2 with the same results. running SISC. 
+3
+#;> 
+================
+Operator terminology 
+A.Prefix notation 
++ 1 2
+
+;> + 1 2
+#<native procedure +>
+#;> 1
+#;> 2
+#;> 
+
+SISC (1.16.6)
+#;> 1 + 2
+1
+#;> #<native procedure +>
+#;> 2
+#;> 
+
+
+
+
+B. Infix notation 
+  1 + 2 
+#;> 1 + 2                                                    
+1
+#;> #<native procedure +>
+#;> 2
+#;> 
+
+
+
+
+
+
+
+C. Postfix notation 
+1  2 + 
+➜  week0 sisc
+SISC (1.16.6)
+#;> 1 21 + 2 +
+1
+#;> 2
+#;> #<native procedure +>
+#;> 
+
+====
+* parenthese are *abolutely necessaary* after par = function. 
+spaces take the place of commas in scheme. 
+
+spaces seperate arguments, not commas, 
+(+ 1 2 3)
+NO DIFFERENCE BETWWEN A FUNCTION AND OPERATOR IN SCHEME. 
+
+ 
+(+-10 5 2)
+#;> (+ 10 5 2)
+17
+#;> //enter new function with arguments. 
+
+
+... traversing a tree. prefix infix & postfix. !!!! important 
+- 1+2 expression. tree = expression. root is the expression. 
+https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
+
+(+ 1 2) traversing a tree (concepts prefix, infix & postfix) 
+
+0. root = + operation. arithmetic operator 
+1. number 1; node 1; first argument; 
+2. number 2 ;node 2; second argument; 
+(9:00 minute mark. )
+traversals and expressions are deeply rooted in the concepted as *expressions as trees*. 
+https://www.youtube.com/watch?v=2Z6g3kNymd0
+
+Functions in Scheme: (example in lecture) 
+- if we have a function we can call it, or we can define our own function. 
+a. Define a function square with a param N. 
+
+(define (square n) (* n n))
+//define is done by a macro in scheme. macro define or special form. 
+b. invoke the square function 
+(square 5) 
+
+c. invoke the square function twice. 
+
+//function code scheme 
+#;> (define (square n) (* n n))
+//call it or define our own function. special form/macro define. 
+//special form define take first argument (name of function and any paramaters)
+// first expression or defining function = macro/special form (aka define) takes argument (name of function + any paramaters). This is special. 
+//next expression (* n n) = body of the function. 
+#;> (square 5)  //invoke function 
+25
+#;> (square (square 5))  // invoke function 2x 
+625
+#;> //ready for input. 
+
+General form: 
+(define (f param_1 param_2 ... param_m) 
+  e_1 e_2 ... e_n)
+  ** Takes m arguments 
+
+  YOU CAN USE BEGIN LIKE C COMMA OPERATOR. (ANOTHER MACRO. )
+  No return keyword, no statements, just expressions
+begin like C comma operator, but not needed
+(define (f param_1 param_2 ... param_m) 
+  (begin e_1 e_2 ... e_n))
+
+(f e_1 e_2 ... e_m-1)
+
+(square 5) = 25
+square 5 = procedure squre 5 
+
+
+EVALUATION ORDER
+Expression (f M N) is evaluated by
+Evaluating expression M to value U
+Evaluating expression N to value V
+Invoking function f with values U and V
+define is a special form, not a function, so it does not obey this convention
+
+

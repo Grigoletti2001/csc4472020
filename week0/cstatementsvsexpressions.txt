@@ -1,0 +1,32 @@
+CONCEPTS OF PROGRAMMING LANGUAGES
+C: STATEMENTS VERSUS EXPRESSIONS
+
+Two levels of language: statements or expressions. (oop)
+======================
+int f (intx) {
+    int y;
+    if (x) y=1; else y=2;
+    return y;
+}
+int main() { printf ("%d\n", f(5)); return 0; } 
+======================
+Is this a valid c program? yes. it compiles to 1 because y= 1 . 
+
+Install Apple Developer Tools on the
+ Mac OS X Install DVD by inserting Disk 1 and choosing Developer Tools
+ .
+Write a program with a text editor and save it with the extension .c
+
+Open Terminal by navigating to Applications > Utilities > Terminal
+
+--> Type gcc with a space afterwards
+
+
+Drag the file with the .c extension to the Terminal
+ window to place the location of the file.
+Press Enter.
+This will generate a file called a.out inside your user folder.
+
+Type ~/a.out
+Press Enter.
+Watch your program come alive!
