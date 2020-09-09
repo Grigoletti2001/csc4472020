@@ -19,3 +19,4 @@ int main() {
 //how to compile and execute the app ? https: //stackoverflow.com/questions/32337643/how-to-run-c-program-on-mac-os-x-using-terminal
 //why use int void main if not integer?  https://www.geeksforgeeks.org/difference-int-main-int-mainvoid/
 
+//this way with a return 0 por void int main? which is better. 
