@@ -1,0 +1,11 @@
+0. Joseph Grigoletti 
+csc 447 fall 2020 
+using zsh/unix on mac os
+
+1. 
+2. questions for discord. 
+
+3. Basics
+3.1 text editor : Vim & VS Code
+3.2 Terminal/console: zsh= oh my zsh, homebrew, brew install tree, etc. 
+3.3 tab autocompletion and case insensivity automaticly taken care of with zsh. 
