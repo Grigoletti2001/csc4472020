@@ -1,2 +1,3 @@
-Worksheet 2: Scheme Joseph Grigoletti 
+Worksheet 2: Scheme Joseph Grigoletti CSC 447
 09 September 2020
+//to get credit complete quiz on d2l check box. 
