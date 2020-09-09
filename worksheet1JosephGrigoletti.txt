@@ -9,3 +9,37 @@ using zsh/unix on mac os
 3.1 text editor : Vim & VS Code
 3.2 Terminal/console: zsh= oh my zsh, homebrew, brew install tree, etc. 
 3.3 tab autocompletion and case insensivity automaticly taken care of with zsh. 
+3.4 envirnmental variables. 
+  3.4.1 For Linux and OS X, run env or env | sort in a terminal. The latter form sorts the output by variable name. For example:
+    $ env | sort
+
+Note: The $ character is the standard last character in prompts for shell programs. 
+You should not type the $; just the env | sort
+
+https://en.wikipedia.org/wiki/Sort_(Unix)
+prints the lines of its input or concatenation of all files listed in its argument 
+list in sorted order.  sort -r reverses order. 
+
+env is a shell command for Unix and Unix-like operating systems. 
+It is used to either print a list of environment variables or run another 
+utility in an altered environment without having to modify the currently existing 
+environment. Using env, variables may be added or removed, and existing variables 
+may be changed by assigning new values to them.
+
+In practice, env has another common use. It is often used by shell scripts
+ to launch the correct interpreter. In this usage, the environment is typically not changed.
+
+What are env. vars?  
+ Simply put, environment variables are variables that are set up in your shell when you log in. 
+ They are called “environment variables” because most of them affect the way your Unix shell works 
+ for you. One points to your home directory and another to your history file
+https://www.networkworld.com/article/3215965/all-you-need-to-know-about-unix-environment-variables.html#:~:text=Simply%20put%2C%20environment%20variables%20are,another%20to%20your%20history%20file.
+
+
+Some environment variables are set up in system files like /etc/profile that are read 
+before your local setup files when you log in.
+
+Environment variables can be changed or unset, but they can also be augmented.
+ If your search path is set up in /etc/profile, you can redefine it in your local .profile or 
+ add to it with a command like this:
+
