@@ -1,0 +1,100 @@
+Last login: Sat Sep 12 16:22:40 on ttys000
+➜  ~ sisc
+SISC (1.16.6)
+#;> (cons 'car 'cdr)
+(car . cdr)
+#;> (list 'this '(is silly))
+(this (is silly))
+#;> (cons 'is '(this silly?))
+(is this silly?)
+#;> (cons 'is '(this silly?))
+(is this silly?)
+#;> (quote (+ 2 3))
+(+ 2 3)
+#;> (cons '+ '(2 3))
+(+ 2 3)
+#;> car '(+ 2 3))
+#<native procedure car>
+#;> (+ 2 3)
+#;> Error in read-code: error reading from port '#<character-input-port>': unexpected close-parenthesis '')''. 
+{warning: printing of stack trace not supported}
+#;> (car '(+ 2 3))
++
+#;> 
+^[[A^[[A
+Error: undefined variable '|\u001b|'.
+{warning: printing of stack trace not supported}
+#;> reverifiing 1-e
+
+^[[A
+sisc
+^[
+^C%                                                                               
+➜  ~ 
+➜  ~ sisc
+SISC (1.16.6)
+#;> (cons 'car 'cdr)
+(car . cdr)
+#;> 
+(list 'this '(is silly))
+(this (is silly))
+#;> 
+(cons 'is '(this silly?))
+(is this silly?)
+#;> (quote (+ 2 3))
+(+ 2 3)
+#;> (cons '+ '(2 3))
+(+ 2 3)
+#;> (car '(+ 2 3))
++
+#;> (cdr '(+ 2 3))
+(2 3)
+#;> cons
+#<native procedure cons>
+#;> (quote cons)
+cons
+#;> (quote (quote cons))
+(quote cons)
+#;> 
+(car (quote (quote cons)))
+quote
+#;> (cdr (quote (quote cons))
+
+(+ 2 3)
+
+^C%                                                                             ➜  ~ 
+➜  ~ sisc
+SISC (1.16.6)
+#;> (+ 2 3)
+5
+#;> (+ 2 3)
+5
+#;> (+ '2 '3)
+5
+#;> (+ (car '(2 3)) (car (cdr '(2 3))))
+5
+#;> (+ (car '(2 3))
+s
+^[
+sk
+
+^X
+^C%                                                                               
+➜  ~ 
+➜  ~ sisc
+SISC (1.16.6)
+#;> (+ '2 '3)
+5
+#;> (+ (car '(2 3)) (car (cdr '(2 3))))
+5
+#;> 
+^C%                                                                             ➜  ~ 
+➜  ~ sisc
+SISC (1.16.6)
+#;> ((car (list + - * /)) 2 3)
+5
+#;> 
+^C%                                                                             ➜  ~ 
+➜  ~ sisc
+SISC (1.16.6)
+#;> 
