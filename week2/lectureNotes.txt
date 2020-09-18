@@ -1,0 +1,134 @@
+Scala Notes.: 
+
+1. Safety (17 min) 
+
+safe vs unsafe languages. 
+    allocate integer on heap. 
+
+    p = pointer on element of memory (2 billion). 
+    32 bit floating numebr have less precision.  
+/////
+int main() {
+    int *p = (int*) malloc (sizeof(int));
+    *p = 2123456789;
+    
+    printf ("(float)*p = %f\n", (float)*p);   /* loss of precision */
+    printf ("*(float*)p = %f\n", *(float*)p); /* rubbish */
+ 
+    int i = 2;
+    char s[] = "three";
+    
+    printf ("i*s = %ld\n", i*(long)s); 
+}
+///
+ref to integer vs ref to floating point value. 
+--> loosing precision, new intepretion. sting*integer doesn't make sense. 
+--> but you get the address. 
+Untitled.c:2:18: warning: implicitly declaring library function 'malloc' with type 'void *(unsigned long)' [-Wimplicit-function-declaration]
+        int *p = (int*) malloc (sizeof(int));
+                        ^
+Untitled.c:2:18: note: include the header <stdlib.h> or explicitly provide a declaration for 'malloc'
+Untitled.c:5:2: warning: implicitly declaring library function 'printf' with type 'int (const char *, ...)' [-Wimplicit-function-declaration]
+        printf ("(float)*p = %f\n", (float)*p);   /* loss of precision */
+        ^
+Untitled.c:5:2: note: include the header <stdio.h> or explicitly provide a declaration for 'printf'
+2 warnings generated.
+(float)*p = 2123456768.000000
+*(float*)p = 96621069057346178268049192388430659584.000000
+i*s = 281465820973148
+
+--> address space randomization. 
+--> **Unsafe Access**. Interpretion bits in an incorrect way. 
+--> scheme throws an exception (dynamic error). 
+--> C ALLOOWS US TO VIOLATE THE BOUNDS OF AN ARRAY. 
+
+
+	
+int main () {
+    float f = 10;    
+    int a[] = { 10 };
+    short i = 10;
+                        printf ("f=%f, a[0]=%d i=%d\n", f, a[0], i);
+    a[-1] = 2123456789; printf ("f=%f, a[0]=%d i=%d\n", f, a[0], i);
+    a[1]  = 2123456789; printf ("f=%f, a[0]=%d i=%d\n", f, a[0], i);
+}
+
+f=10.000000, a[0]=10 i=10
+f=10.000000, a[0]=10 i=32401
+f=96621069057346178268049192388430659584.000000, a[0]=10 i=32401
+
+
+updates illegal values of array. 
+C updates memory I shouldn't have access it. 
+
+Aliasing a pointer on the stack. 
+-a alias ( a copy). the alias is a copy and cooied into y. 
+-dangling pointers. 
+
+*stack vs heap in code. 
+
+free location (in c). may be used for a subsequent alocation. 
+integer pointer: 
+
+functin pointers:
+-pointer arthimetic. 
+-safe vs unsafe command. 
+-OUCH! 
+function pointers with arguments. 
+C types are difficult to read, there are tools to help
+https://cdecl.org/
+var declared and spirel around. 
+
+Unsafety and security. 
+unsafety causes security problems. (buffer overflow)
+java was designed to be safe (out of the languages...restrictions. no pointers in stact. no pointers in stack. no free operations. imposes checks on array bounds. bonds checks. )
+-in java throws exceptions with bonds.  (casts. checked casts)
+-java = safe. C = not safe. 
+
+-dynamic casts. 
+-in java checked array assignment. 
+
+Traditional systems languages are purposefully unsafe
+Assembly, C, C++, Objective-C, C#-unmanaged, .
+
+Recent application languages are meant to be safe
+Java, Scheme, Javascript, Python, , C#-managed, ...
+----------------
+Unsafe = access to low level. thus unsafe. 
+Systems languages vs. applications languages (rust & go. have the efficiency, but the safety)
+
+higherlevel (app languages)= unsafe. 
+
+-------------
+NULL = a billion dollar mistake. 
+Tony Hoare. 
+https://youtu.be/ybrQvs4x0Ps 
+Option types. 
+see option types. 
+
+
+2. Dynamic/Static Types (11 min) 
+- also option types. 
+-compiler to compute offsets. 
+-in C does not encforce thypes, only to compute offsets. 
+-in scheme, we run functions dynamically by defering our operatings into functions. 
+- in java we ca are very limited by the static nature. (int. double, string). scheme is more dynamic, because we can always involve a function. 
+there is a dynamic element to java. treat object as integer and compiler is happy, both static and dymanic. Strintgs cannot be cassed as integers. 
+- static = var has types. *****casting**** (up and down) allows us to get around this. 
+Java declarations. 
+Java var form (infers the most precise. int, integer, number). compiler vs dynamiler error. 
+values have type. (compiler vs dynamic error). 
+in dynamic language. variables don't have types, only values have types. 
+
+Dynamic is a bit more flexible. 
+
+
+
+
+3. Scala Pragmatics (10 min) 
+
+
+4. Scala Introduction (45 min) 
+
+
+(Recording of zoom class)
