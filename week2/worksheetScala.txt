@@ -1,0 +1,220 @@
+
+1. Questions & completion 
+
+2. Schele 
+
+
+3. Java
+
+
+4.  Scala 
+
+
+5. Solutions.  See above and here
+ 5.1 Solution: Scheme Type Checking
+(define (f) (- 5 "hello"))
+5.2 Solution: Java Upcasting
+public class Upcast {
+  static class A           { int x; }
+  static class B extends A { int y; }
+
+  void f (B p) {
+    A q = p;
+  }
+}
+5.3 Solution: Java Downcasting
+public class Downcast {
+  static class A           { int x; }
+  static class B extends A { int y; }
+
+  static B convert (A p) {
+    B result = (B) p;
+    return result;
+  }
+
+  public static void main (String[] args) {
+    A r = new A ();
+    r.x = 5;
+    B s = convert (r);
+    System.out.println (s);
+  }
+}
+5.4 Solution: Scala Literals and Arithmetic
+val b1 = true
+val b2 = false
+
+val b3 = !b2
+val b4 = b1 && b2 
+val b5 = b1 || b2 
+
+val n1 = 2
+val n2 = 3
+
+val n3 = n1 + n2
+val n4 = n1 - n2
+val n5 = n1 * n2
+val n6 = n1 / n2
+
+/* Character literals are delimited by an apostrophe. */
+val c1 = 'h'
+val c2 = 'e'
+val c3 = 'e'
+
+/* String literals are delimited by double quotes. */
+val s1 = "hello"
+val s2 = "world"
+
+/* The string concatenation function is written infix as "+". */
+val s3 = s1 + " " + s2
+5.5 Solution: Tuples
+/* Pairs are created using parentheses. */
+
+/* They may have the same type. */
+val pair1 = (3, 5)
+val pair2 = ("hello", "world")
+
+/* Or different types. */
+val pair3 = (3, "hello")
+val pair4 = ("hello", 3)
+
+/* More generally, we can create tuples using the same syntax. */
+val tuple1 = pair1
+val tuple2 = (3, 5, 3, "hello")
+
+/* Tuples can nest. */
+val nested1 = ((3, 5), ("hello", "world"))
+val nested2 = (pair1, pair2)
+
+/* Now test equality of nested1 and nested2. */
+val equal12 = nested1 == nested2
+
+/* The nesting is significant.  tuple2 has a different type to nested1
+ * and nested2.  Try running "tuple2 == nested1" at the 
+ * command line to see that they are distinct values.
+ */
+5.6 Solution: Lists
+val emptylist = Nil
+/* The following yields the same result as emptylist. */
+val emptylist2 = List ()  
+
+val singletonlist1 = List (5)
+val singletonlist2 = List ('a')
+val singletonlist3 = List ("hello")
+val singletonlist4 = 5 :: Nil
+
+/* Every object in a list must have the same type. */
+val list1 = List (5, 4, 3, 2, 1)
+val list1a = 5 :: (4 :: (3 :: (2 :: (1 :: Nil))))
+val list2 = List (1, 2, 3, 4, 5)
+
+/* Creates a List[Char] from a String */
+val characters = "hello".toList
+
+/* Functions/methods such as "reverse", concatenation/append ":::", and cons "::" can operate on
+ * lists.
+ */
+val list3 = list2.reverse
+val list4 = list1 ::: list2 /* ::: - joins two lists */
+val list5 = 29 :: list2     /* ::  - joins a list element and a list */
+val list6 = 1 :: 2 :: 3 :: 4 :: 5 :: Nil
+
+/* Lists can be compared for equality, and equality is based upon
+ * having the same elements.  It is not possible to create
+ * (observably) distinct lists with the same elements.
+ */
+
+val equal12a = list1 == list2
+val equal12b = list1 == list3
+
+val equal = list2 == (1 to 5).toList
+
+/* SUMMARY:
+ * * TUPLES: the type specifies the length, and individual components
+ *   may have different types.
+ *
+ * * LISTS: the length is unbounded (and may even be infinite!), and
+ *   individual components must have the same type.
+ *
+ * Tuples, lists, strings, etc., are all immutable.  You cannot
+ * change them at all.
+ */
+5.7 Solution: Equality Testing
+These are straightforward:
+
+scala> List (1, 2, 3) == List (1, 2, 3)
+res1: Boolean = true
+
+scala> List (1, 2, 3) eq List (1, 2, 3)
+res2: Boolean = false
+These are more tricky. The REPL happens to return the same String instance for hello so eq does not return false as we expect.
+
+scala> "hello" == "hello"
+res3: Boolean = true
+
+scala> "hello" eq "hello"
+res4: Boolean = true
+But we can use a different expression to create a fresh instance of a hello String. This works as expected (returns false for eq).
+
+scala> "hello" == "olleh".reverse
+res5: Boolean = true
+
+scala> "hello" eq "olleh".reverse
+res6: Boolean = false
+5.8 Solution: Factorial
+def fact (n:Int) : Int = if (n <= 1) 1 else n * fact (n - 1)
+def fact (n:Int) : Int = {
+  println ("called with n = %d".format (n))
+  if (n <= 1) {
+    println ("no recursive call")
+    1 
+  } else {
+    println ("making recursive call")
+    n * fact (n - 1)
+  }
+}
+5.9 Solution: Upto
+def upto (start:Int, end:Int) : List[Int] = {
+  if (start > end) 
+    Nil
+  else 
+    start :: upto (start + 1, end)
+}
+5.10 Solution: Repeat
+def repeat [X] (element:X, repetitions:Int) : List[X] = {
+  if (repetitions == 0) 
+    Nil
+  else 
+    element :: repeat (element, repetitions - 1)
+}
+5.11 Recursive List Traversal
+// Unit is the equivalent of the C/Java void type
+// The dummy value of type Unit is ().
+def printCounterAux [X] (xs:List[X], count:Int) : Unit = {
+  xs match {
+    case Nil   => ()
+    case y::ys => {
+      println ("[%03d] %s".format (count, y))
+      printCounterAux (ys, count + 1)
+    }
+  }
+}
+
+def printCounter [X] (xs:List[X]) : Unit = {
+  printCounterAux (xs, 1)
+}
+
+printCounter (List ("the", "rain", "in", "spain"))
+5.12 Analyzing Functions
+f (Nil)
+--> Nil
+f (5::Nil)
+--> 5::(5::(f (Nil)))
+--> 5::(5::(Nil))
+f (4::(5::Nil))
+--> 4::(4::(f (5::Nil)))
+--> 4::(4::(5::(5::(Nil))))
+f (3::(4::(5::Nil)))
+--> 3::(3::(f (4::(5::Nil))))
+--> 3::(3::(4::(4::(5::(5::(Nil))))))
+The function doubles each occurrence of elements in a list. The resulting list is twice as long as the input list.
+
