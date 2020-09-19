@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/csc4472020/week2/hw/src/main/scala/argpass.scala:41:10: ';' expected but 'class' found.[0m
+[0m[[0m[31merror[0m] [0m[0m  of the class RefInt) and returns Unit (i.e., nothing interesting).[0m
+[0m[[0m[31merror[0m] [0m[0m         ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
