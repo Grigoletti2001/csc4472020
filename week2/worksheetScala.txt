@@ -10,7 +10,10 @@
 4.  Scala 
 
 
+
+
 5. Solutions.  See above and here
+
  5.1 Solution: Scheme Type Checking
 (define (f) (- 5 "hello"))
 5.2 Solution: Java Upcasting

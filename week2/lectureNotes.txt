@@ -122,13 +122,21 @@ in dynamic language. variables don't have types, only values have types.
 
 Dynamic is a bit more flexible. 
 
-
+static errors can check more errors at compile time and faster code. 
+static type is checking is conservative. they use inference. don't require explicit declarations.  
 
 
 3. Scala Pragmatics (10 min) 
+-install java 8 or 11. 
+Install scall build tool. 
+brew upgrade sbt. 
+java 11 used. 
+download scala homework! 
 
 
 4. Scala Introduction (45 min) 
+
+
 
 
 (Recording of zoom class)
