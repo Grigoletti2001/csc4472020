@@ -110,8 +110,11 @@ object fp1 {
   // the exercises in this assignment, your function MUST be recursive and MUST NOT use a while
   // loop.
   def sum (xs : List[Int]) : Int = {
-    // TODO: Provide definition here.
-    -1
+   xs match {
+    case Nil => 0
+    case x :: tail => sum(tail)
+   }
+
   }
 
 
@@ -127,8 +130,7 @@ object fp1 {
   }
 
   def sumTail (xs : List[Int]) : Int = {
-    // TODO: Provide definition here.
-    -1
+    sumTailAux(0, xs)    
   }
 
 
@@ -137,17 +139,23 @@ object fp1 {
   // hence the "NoSuchElementException".  Your function MUST be recursive and MUST NOT use a while
   // loop.  You MUST NOT use the "max" method on lists, but can use the "max" method on integers.
   def max (xs : List[Int]) : Int = {
-    // TODO: Provide definition here.
-    -1
+    xs match {
+      case Nil => throw new java.util.NoSuchElementException
+      caseNotNil => xs.reduceLeft((x,y) => if (x > y) x else y)
+    
   }
+
+
 
   // EXERCISE 9: given the definition of the function "maxTail" below, complete the
   // definition of the function "maxTailAux" so that "maxTail" also finds the
   // maximum of a list of integers.  You must not alter the definition of "maxTail".  Your
   // definition for "maxTailAux" must be recursive and not use while loops.
   def maxTailAux (accumulator : Int, xs : List[Int]) : Int = {
-    // TODO: Provide definition here.
-    -1
+
+    if(xs.isEmpty) {accumulator}
+    else if (xs.head > accumulator) { maxTailAux (xs.head, xs.tail)}
+    else {maxTailAux(accumulator,xs.tail)}
   }
 
   def maxTail (xs : List[Int]) : Int = {
@@ -161,8 +169,9 @@ object fp1 {
   // "start" and "end" and produces a "List[Int]" that counts DOWN from "start" to "end" (inclusive
   // at both ends) one at a time.  If "start < end", the empty list must be returned.
   def otpu (start : Int, end : Int) : List[Int] = {
-    // TODO: Provide definition here.
-    null
+ 
+      if(start>=end) start :: otpu(start-1,end)
+        else List()
   }
 }
 
