@@ -68,29 +68,34 @@ object fp1 {
   // List(1,2,6,24,120).  You must call the "fact" function (five times) defined above instead of
   // hardcoding the numbers 1,2,6,24,120.
   val factTest : List[Int] = {
-    // TODO: Change "Nil" to the correct answer.
-    Nil
+
+    val 1 = List(1,2,3,4,5)
+      1.map(fact)
+
   }
 
   // EXERCISE 2: complete the following definition of the Fibonacci function.
   def fib (n : Int) : Int = {
-    // TODO: Provide definition here.
-    -1
-  }
+    if (n <= 1)
+      n
+      else
+        fib(n-1) + fib(n-2)
+
+}
+ 
 
   
   // EXERCISE 3: declare the identifier "p1" with a pair consisting of the Int 7 and the String
   // "hello"
   val p1 : (Int, String) = {
-    // TODO: Provide definition here.
-    null
+   (7, "hello")
   }
 
   // EXERCISE 4: declare the identifier "t1" with a triple consisting of the Int 7, the String
   // "hello", and the Boolean false
   val t1 : (Int, String, Boolean) = {
-    // TODO: Provide definition here.
-    null
+    (7, "hello", false)
+
   }
 
   // EXERCISE 5: write a function "swap" that takes a pair of an Int and a String, and returns a
@@ -98,8 +103,7 @@ object fp1 {
   // should return ("hello", 7).  You can use "p._1" and "p._2" to access the first and second
   // components of a pair.
   def swap (p:(Int,String)) : (String,Int) = {
-    // TODO: Provide definition here.
-    null
+   (p._2,p._1)
   }
 
   // EXERCISE 6: write a function "sum" that takes a list of integers and sums them.  As with all of
