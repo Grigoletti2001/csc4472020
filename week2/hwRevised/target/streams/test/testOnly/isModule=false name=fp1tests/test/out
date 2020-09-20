@@ -4,14 +4,7 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- EX03 - p1[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- EX04 - t1[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- EX05 - swap[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m- EX06 - sum *** FAILED ***[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  TestFailedException was thrown during property evaluation. (fp1tests.scala:67)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m    Message: 0 did not equal 15[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m    Location: (fp1tests.scala:68)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m    Occurred at table row 1 (zero based, not counting headings), which had values ([0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m      xs = List(15),[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m      sum (xs) = 15[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m    )[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX06 - sum[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- EX07 - sumTail[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m- EX08 - max *** FAILED ***[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m  TestFailedException was thrown during property evaluation. (fp1tests.scala:94)[0m[0m

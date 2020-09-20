@@ -136,19 +136,28 @@ object fp1 {
   // integer in a list of integers.  Note that no value can be returned when the list is empty,
   // hence the "NoSuchElementException".  Your function MUST be recursive and MUST NOT use a while
   // loop.  You MUST NOT use the "max" method on lists, but can use the "max" method on integers.
-  def max (xs : List[Int]) : Int = {
-    // TODO: Provide definition here.
-    def matchMax(xs : List[Int], mVal: Int): Int={
-      xs match{
-        case Nil => mVal
-        case x:: t =>
-          val newMax = if(x > mVal)x
-        else mVal
-        matchMax(t, newMax)
-      }
+
+def max (xs : List [Int]) : Int = {
+
+  def maxMatch (xs: List[Int],mVal: Int): Int = {
+
+    xs match {
+      
+        case List () => mVal
+        case head:: tail=> if (head > mVal) {
+
+          maxMatch (tail, head)
+        } else {
+
+          maxMatch(tail, mVal)
+        }
+
+
     }
-    matchMax(xs, 0)
+
+
   }
+
 
 
 
