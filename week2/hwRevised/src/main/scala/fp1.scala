@@ -135,7 +135,7 @@ object fp1 {
   // integer in a list of integers.  Note that no value can be returned when the list is empty,
   // hence the "NoSuchElementException".  Your function MUST be recursive and MUST NOT use a while
   // loop.  You MUST NOT use the "max" method on lists, but can use the "max" method on integers.
-  def max (xs : List[Int]) : Int = {
+  def max (xs : List[Int]) : Int = 
     xs match {
       case Nil => throw new java.util.NoSuchElementException
       caseNotNil => xs.reduceLeft((x,y) => if (x > y) x else y)
