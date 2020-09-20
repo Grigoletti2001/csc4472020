@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/csc4472020/week2/hwRevised/src/main/scala/fp1.scala:72:6: ';' expected but integer literal found.[0m
+[0m[[0m[31merror[0m] [0m[0m  al 1 = List(1,2,3,4,5)[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/csc4472020/week2/hwRevised/src/main/scala/fp1.scala:143:3: Missing closing brace `}` assumed here[0m
+[0m[[0m[31merror[0m] [0m[0m  }[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

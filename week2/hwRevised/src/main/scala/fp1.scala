@@ -69,7 +69,7 @@ object fp1 {
   // hardcoding the numbers 1,2,6,24,120.
   val factTest : List[Int] = {
     // TODO: Change "Nil" to the correct answer.
-  al 1 = List(1,2,3,4,5)
+  val 1 = List(1,2,3,4,5)
       1.map(fact)
   }
 
