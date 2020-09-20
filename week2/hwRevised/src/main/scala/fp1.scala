@@ -68,10 +68,10 @@ object fp1 {
   // List(1,2,6,24,120).  You must call the "fact" function (five times) defined above instead of
   // hardcoding the numbers 1,2,6,24,120.
   val factTest : List[Int] = {
-    // TODO: Change "Nil" to the correct answer.
-  val 1 = List(1,2,3,4,5)
-      1.map(fact)
+    val numList = List(1,2,3,4,5)
+    numList.map(fact)
   }
+
 
   // EXERCISE 2: complete the following definition of the Fibonacci function.
  def fib (n : Int) : Int = {
@@ -107,13 +107,14 @@ object fp1 {
   // EXERCISE 6: write a function "sum" that takes a list of integers and sums them.  As with all of
   // the exercises in this assignment, your function MUST be recursive and MUST NOT use a while
   // loop.
- def sum (xs : List[Int]) : Int = {
-   xs match {
-    case Nil => 0
-    case x :: tail => sum(tail)
-   }
-
+  def sum (xs : List[Int]) : Int = {
+    // TODO: Provide definition here.
+    xs match{
+      case nNil :: tail => nNil + sum(tail)
+      case Nil => 0
+    }
   }
+
 
 
   // EXERCISE 7: given the definition of the function "sumTailAux" below, complete the
@@ -135,12 +136,21 @@ object fp1 {
   // integer in a list of integers.  Note that no value can be returned when the list is empty,
   // hence the "NoSuchElementException".  Your function MUST be recursive and MUST NOT use a while
   // loop.  You MUST NOT use the "max" method on lists, but can use the "max" method on integers.
-  def max (xs : List[Int]) : Int = 
-    xs match {
-      case Nil => throw new java.util.NoSuchElementException
-      caseNotNil => xs.reduceLeft((x,y) => if (x > y) x else y)
-    
+  def max (xs : List[Int]) : Int = {
+    // TODO: Provide definition here.
+    def matchMax(xs : List[Int], mVal: Int): Int={
+      xs match{
+        case Nil => mVal
+        case x:: t =>
+          val newMax = if(x > mVal)x
+        else mVal
+        matchMax(t, newMax)
+      }
+    }
+    matchMax(xs, 0)
   }
+
+
 
   // EXERCISE 9: given the definition of the function "maxTail" below, complete the
   // definition of the function "maxTailAux" so that "maxTail" also finds the

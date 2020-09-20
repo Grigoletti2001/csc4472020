@@ -24,3 +24,5 @@ testOnly fp1
 testOnly fp2
 testOnly fp1Tests
 compile
+console
+compile

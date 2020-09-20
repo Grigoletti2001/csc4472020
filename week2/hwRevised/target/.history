@@ -2,3 +2,6 @@ sbt
 console
 testOnly fp1tests
 ~testOnly fp1tests
+testOnly fp1tests
+~testOnlyfp1tests
+testOnly fp1tests
