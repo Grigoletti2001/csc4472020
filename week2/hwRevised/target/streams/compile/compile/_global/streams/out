@@ -1,9 +1,6 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/csc4472020/week2/hwRevised/src/main/scala/fp1.scala:72:7: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : Int(1)[0m
-[0m[[0m[31merror[0m] [0m[0m required: List[Int][0m
-[0m[[0m[31merror[0m] [0m[0m  val 1 = List(1,2,3,4,5)[0m
-[0m[[0m[31merror[0m] [0m[0m      ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/csc4472020/week2/hwRevised/src/main/scala/fp1.scala:73:9: value map is not a member of Int[0m
-[0m[[0m[31merror[0m] [0m[0m      1.map(fact _)[0m
-[0m[[0m[31merror[0m] [0m[0m        ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/csc4472020/week2/hwRevised/src/main/scala/fp1.scala:163:1: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Unit[0m
+[0m[[0m[31merror[0m] [0m[0m required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m}[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

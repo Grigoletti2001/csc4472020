@@ -1,7 +1,3 @@
-[0m[[0m[31merror[0m] [0m[0mTerminating watch due to invalid command(s): 'Expected ';'[0m
-[0m[[0m[31merror[0m] [0m[0mNot a valid command: testOnlyfp1tests[0m
-[0m[[0m[31merror[0m] [0m[0mNot a valid project ID: testOnlyfp1tests[0m
-[0m[[0m[31merror[0m] [0m[0mExpected ':'[0m
-[0m[[0m[31merror[0m] [0m[0mNot a valid key: testOnlyfp1tests (similar: testOnly, testOptions)[0m
-[0m[[0m[31merror[0m] [0m[0mtestOnlyfp1tests[0m
-[0m[[0m[31merror[0m] [0m[0m                ^'[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [hwrevised / Test / testOnly] Found inputs: /Users/josephgrigolettiii/Github/csc4472020/week2/hwRevised/*.{java,scala},/Users/josephgrigolettiii/Github/csc4472020/week2/hwRevised/src/main/java/**/*.{java,scala},/Users/josephgrigolettiii/Github/csc4472020/week2/hwRevised/src/main/resources/**/*,/Users/josephgrigolettiii/Github/csc4472020/week2/hwRevised/src/main/scala/**/*.{java,scala},/Users/josephgrigolettiii/Github/csc4472020/week2/hwRevised/src/main/scala-2.13/**/*.{java,scala},/Users/josephgrigolettiii/Github/csc4472020/week2/hwRevised/src/test/java/**/*.{java,scala},/Users/josephgrigolettiii/Github/csc4472020/week2/hwRevised/src/test/resources/**/*,/Users/josephgrigolettiii/Github/csc4472020/week2/hwRevised/src/test/scala/**/*.{java,scala},/Users/josephgrigolettiii/Github/csc4472020/week2/hwRevised/src/test/scala-2.13/**/*.{java,scala}[0m
+[0m[[0m[0minfo[0m] [0m[0m1. Monitoring source files for hwrevised/testOnly fp1tests...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m

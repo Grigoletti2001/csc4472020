@@ -137,25 +137,10 @@ object fp1 {
   // hence the "NoSuchElementException".  Your function MUST be recursive and MUST NOT use a while
   // loop.  You MUST NOT use the "max" method on lists, but can use the "max" method on integers.
 
-def max (xs : List [Int]) : Int = {
-
-  def maxMatch (xs: List[Int],mVal: Int): Int = {
-
+  def max (xs : List[Int]) : Int = 
     xs match {
-      
-        case List () => mVal
-        case head:: tail=> if (head > mVal) {
-
-          maxMatch (tail, head)
-        } else {
-
-          maxMatch(tail, mVal)
-        }
-
-
-    }
-
-
+    case Nil => throw new java.util.NoSuchElementException
+    case notNil => xs.reduceLeft((x,y) => if (x > y) x else y)
   }
 
 
