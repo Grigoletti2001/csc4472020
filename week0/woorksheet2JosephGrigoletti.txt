@@ -1,0 +1,35 @@
+Worksheet 2: Scheme Joseph Grigoletti CSC 447
+09 September 2020
+1. //to get credit complete quiz on d2l check box. 
+2. Java statements vs expressions. 
+2.1 write a simple java program (comma and tenary operators)
+javatest.java 
+
+//ternary operator = 
+find the largest number (also ternary class. )
+
+javatest.java
+
+2.2Prerequisite Material: While Loops, For Loops, Iterators, and Recursion
+The following Java program shows how to compute the sum of integers specified on the command line. You should already be familiar with each of these, but if not, check your Java textbook.The following Java program shows how to compute the sum of integers specified on the command line. You should already be familiar with each of these, but if not, check your Java textbook.
+//see deitel. 
+2.3 linked lists in java. 
+
+see linkedlists.java file 
+
+3.1 
+Consider the following C program using (singly) linked lists containing int elements. Replace the comments with code, so that they calculate the sum of the command-line arguments. You should use a while loop, a for loop, and a recursive method respectively.
+
+see linkedlist.c file 
+
+4. scheme 
+As you go through this section, it is recommended that you also refer to sections 2.1, 2.2, 2.3, 2.4 of The Scheme Programming Language, 4th Edition, by R. Kent Dybvig.
+If you want to install scheme at home, I recommend SISC Scheme.
+
+all installed. 
+4.3.1 see screen shots of unix terminal 
+
+
+
+
+
