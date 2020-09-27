@@ -65,8 +65,8 @@ object fp2 {
 
   }
 
-  RCISE 4: complete the following recursive definition of a "flatten" function
-   Scala's builtin List type.  You must not use the builtin "flatten" method.
+// ERCISE 4: complete the following recursive definition of a "flatten" function
+  // Scala's builtin List type.  You must not use the builtin "flatten" method.
   // Your implementation of "flatten" MUST be recursive.
   // HINT: use either ":::" or your definition of "append" in the body of the cons-cell case.
   // EXAMPLE:
@@ -121,13 +121,14 @@ object fp2 {
   // - joinTerminateRight (List ("a"), ";") == "a;"
   // - joinTerminateRight (List ("a","b","c","d"), ";") == "a;b;c;d;"
 
-    def joinTerminateRight (xs : List[String], delimiter : String) : String = {
-    def f(s: String, n: String) : String = delimiter + s + n
-    xs match{
-      case Nil => ""
-      case y::ys => y + foldRight(ys,delimiter,f)
-    }
+     def joinTerminateRight (xs : List[String], term : String) : String = {
+	def f(splitt : String, x: String) : String = {term + splitt + x}
+	xs match{
+	case Nil => ""
+	case x::xs => x+foldRight(xs,term,f)
+	}
   }
+
 
   // EXERCISE 8: complete the following definition of a "joinTerminateLeft" function
   // to take a list of strings "xs" and concatenate all strings using a string "term"
@@ -138,15 +139,17 @@ object fp2 {
   // - joinTerminateLeft (Nil, ";") == ""
   // - joinTerminateLeft (List ("a"), ";") == "a;"
   // - joinTerminateLeft (List ("a","b","c","d"), ";") == "a;b;c;d;"
+
   def joinTerminateLeft (xs : List[String], term : String) : String = {
-    // TODO: Provide definition here.
-  
-def f(splitt : String, x: String) : String = {splitt + x + term}
-	xs match {
+   def f(splitt : String, x: String) : String = {splitt + x + term}
+	xs match{
 	case Nil => ""
 	case x::xs => foldLeft(xs, f("",x),f)
-	}  
+	}
   }
+
+
+
 
   // EXERCISE 9: complete the following recursive definition of a "firstNumGreaterThan" function
   // to find the first number greater than or equal to "a" in a list of integers "xs".
@@ -156,15 +159,12 @@ def f(splitt : String, x: String) : String = {splitt + x + term}
   // EXAMPLES:
   // - firstNumGreaterThan (5, List (4, 6, 8, 5)) == 6
   def firstNumGreaterThan (a : Int, xs : List[Int]) : Int = {
-    // TODO: Provide definition here.
-    //
-    //
-    //
-    //
-    //
-    //
-    -1
-  }
+    xs match {
+      case Nil => throw new RuntimeException
+      case x::xs => if(x < a) firstNumGreaterThan(a,xs) else x }
+    }
+
+
 
   // EXERCISE 10: complete the following recursive definition of a "firstIndexNumGreaterThan" function
   // to find the index (position) of the first number greater than or equal to "a" in a list of integers "xs".
@@ -177,14 +177,14 @@ def f(splitt : String, x: String) : String = {splitt + x + term}
   // HINT: this is a bit easier to write if you use an auxiliary function.
   def firstIndexNumGreaterThan (a : Int, xs : List[Int]) : Int = {
     // TODO: Provide definition here.
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    -1
+    xs.indexOf(index(a,xs))
   }
-}
+  def index(a:Int,xs:List[Int]): Int ={
+  xs match{
+  case Nil => throw new RuntimeException
+  case x::xs => if(x < a) index(a,xs) else x
+    }
+  }
+
+
 

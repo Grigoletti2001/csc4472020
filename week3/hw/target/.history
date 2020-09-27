@@ -26,3 +26,8 @@ testOnly fp1Tests
 compile
 console
 compile
+console
+1+3
+console
+compile
+console

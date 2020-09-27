@@ -1,28 +1,16 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/csc4472020/week2/hw/src/main/scala/argpass.scala:41:10: ';' expected but 'class' found.[0m
-[0m[[0m[31merror[0m] [0m[0m  of the class RefInt) and returns Unit (i.e., nothing interesting).[0m
-[0m[[0m[31merror[0m] [0m[0m         ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/csc4472020/week2/hw/src/main/scala/fp1.scala:84:1: Missing closing brace `}` assumed here[0m
-[0m[[0m[31merror[0m] [0m[0m}[0m
-[0m[[0m[31merror[0m] [0m[0m^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/csc4472020/week2/hw/src/main/scala/fp1.scala:90:3: expected class or object definition[0m
-[0m[[0m[31merror[0m] [0m[0m  val p1 : (Int, String) = {[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week3/hw/src/main/scala/fp2.scala:125:5: Missing closing brace `}` assumed here[0m
+[0m[[0m[31merror[0m] [0m[0m    def f(s: String, n: String) : String = delimiter + s + n[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week3/hw/src/main/scala/fp2.scala:141:3: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m  def joinTerminateLeft (xs : List[String], term : String) : String = {[0m
 [0m[[0m[31merror[0m] [0m[0m  ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/csc4472020/week2/hw/src/main/scala/fp1.scala:96:3: expected class or object definition[0m
-[0m[[0m[31merror[0m] [0m[0m  val t1 : (Int, String, Boolean) = {[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week3/hw/src/main/scala/fp2.scala:158:3: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m  def firstNumGreaterThan (a : Int, xs : List[Int]) : Int = {[0m
 [0m[[0m[31merror[0m] [0m[0m  ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/csc4472020/week2/hw/src/main/scala/fp1.scala:105:3: expected class or object definition[0m
-[0m[[0m[31merror[0m] [0m[0m  def swap (p:(Int,String)) : (String,Int) = {[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week3/hw/src/main/scala/fp2.scala:175:3: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m  def firstIndexNumGreaterThan (a : Int, xs : List[Int]) : Int = {[0m
 [0m[[0m[31merror[0m] [0m[0m  ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/csc4472020/week2/hw/src/main/scala/fp1.scala:112:3: expected class or object definition[0m
-[0m[[0m[31merror[0m] [0m[0m  def sum (xs : List[Int]) : Int = {[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week3/hw/src/main/scala/fp2.scala:179:3: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m  def index(a:Int,xs:List[Int]): Int ={[0m
 [0m[[0m[31merror[0m] [0m[0m  ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/csc4472020/week2/hw/src/main/scala/fp1.scala:125:3: expected class or object definition[0m
-[0m[[0m[31merror[0m] [0m[0m  def sumTailAux (accumulator : Int, xs : List[Int]) : Int = {[0m
-[0m[[0m[31merror[0m] [0m[0m  ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/csc4472020/week2/hw/src/main/scala/fp1.scala:132:3: expected class or object definition[0m
-[0m[[0m[31merror[0m] [0m[0m  def sumTail (xs : List[Int]) : Int = {[0m
-[0m[[0m[31merror[0m] [0m[0m  ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/csc4472020/week2/hw/src/main/scala/fp1.scala:141:3: expected class or object definition[0m
-[0m[[0m[31merror[0m] [0m[0m  def max (xs : List[Int]) : Int = {[0m
-[0m[[0m[31merror[0m] [0m[0m  ^[0m
-[0m[[0m[31merror[0m] [0m[0m9 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m5 errors found[0m
