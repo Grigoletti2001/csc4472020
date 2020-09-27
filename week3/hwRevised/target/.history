@@ -1,0 +1,23 @@
+sbt
+console
+testOnly fp1tests
+~testOnly fp1tests
+testOnly fp1tests
+~testOnlyfp1tests
+testOnly fp1tests
+~testOnlyfp1tests
+~testOnly fp1tests
+  def max (xs : List[Int]) : Int = 
+    xs match {
+ew java.util.NoSuchElementException
+otNil => xs.reduceLeft((x,y) => if (x > y) x else y)
+~testOnly fp1tests
+console
+concole
+console
+~testOnly fp2tests
+console
+conole
+console
+consoel
+console

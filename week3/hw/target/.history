@@ -31,3 +31,7 @@ console
 console
 compile
 console
+clear
+clear;
+clean
+test

@@ -1,34 +1,5 @@
-// GENERATED
-/* INSTRUCTIONS
- *
- * Complete the exercises below.  For each "EXERCISE" comment, add
- * code immediately below the comment.
- *
- * Please see README.md for instructions, including compilation and testing.
- * 
- * GRADING
- * 
- * 1. Submissions MUST compile using SBT with UNCHANGED configuration and tests with no
- *    compilation errors.  Submissions with compilation errors will receive 0 points.
- *    Note that refactoring the code will cause the tests to fail.
- *
- * 2. You MUST NOT edit the SBT configuration and tests.  Altering it in your submission will
- *    result in 0 points for this assignment.
- *
- * 3. You MUST NOT use while loops or (re)assignment to variables (you can use "val" declarations,
- *    but not "var" declarations).  You must use recursion instead.
- *
- * 4. You may declare auxiliary functions if you like.
- *
- * SUBMISSION
- *
- * 1. Submit this file on D2L before the deadline.
- *
- * 2. Late submissions will not be permitted because solutions will be discussed in class.
- * 
- */
 
-object fp2 {
+
 
   // EXERCISE 1: complete the following recursive definition of a "map" function
   // for Scala's builtin List type.  You must not use the builtin "map" method.
@@ -121,13 +92,13 @@ object fp2 {
   // - joinTerminateRight (List ("a"), ";") == "a;"
   // - joinTerminateRight (List ("a","b","c","d"), ";") == "a;b;c;d;"
 
-     def joinTerminateRight (xs : List[String], term : String) : String = {
-	def f(splitt : String, x: String) : String = {term + splitt + x}
-	xs match{
-	case Nil => ""
-	case x::xs => x+foldRight(xs,term,f)
-	}
-  }
+def joinTerminateRight (xs : List[String], term : String) : String = {
+   def f(splitt : String, x: String) : String = {term + splitt + x}
+   xs match{
+   case Nil => ""
+   case x::xs => x+foldRight(xs,term,f)
+   }
+}
 
 
   // EXERCISE 8: complete the following definition of a "joinTerminateLeft" function
@@ -140,13 +111,12 @@ object fp2 {
   // - joinTerminateLeft (List ("a"), ";") == "a;"
   // - joinTerminateLeft (List ("a","b","c","d"), ";") == "a;b;c;d;"
 
-  def joinTerminateLeft (xs : List[String], term : String) : String = {
+def joinTerminateLeft (xs : List[String], term : String) : String = {
    def f(splitt : String, x: String) : String = {splitt + x + term}
-	xs match{
-	case Nil => ""
-	case x::xs => foldLeft(xs, f("",x),f)
-	}
-  }
+   xs match{
+   case Nil => ""
+   case x::xs => foldLeft(xs, f("",x),f)
+   }
 
 
 
@@ -185,6 +155,8 @@ object fp2 {
   case x::xs => if(x < a) index(a,xs) else x
     }
   }
+
+}
 
 
 

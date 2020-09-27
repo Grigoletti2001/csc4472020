@@ -1,16 +1,25 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week3/hw/src/main/scala/fp2.scala:125:5: Missing closing brace `}` assumed here[0m
-[0m[[0m[31merror[0m] [0m[0m    def f(s: String, n: String) : String = delimiter + s + n[0m
-[0m[[0m[31merror[0m] [0m[0m    ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week3/hw/src/main/scala/fp2.scala:141:3: expected class or object definition[0m
-[0m[[0m[31merror[0m] [0m[0m  def joinTerminateLeft (xs : List[String], term : String) : String = {[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week3/hw/src/main/scala/fp2.scala:7:3: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m  def map [A,B] (xs:List[A], f:A=>B) : List[B] = {[0m
 [0m[[0m[31merror[0m] [0m[0m  ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week3/hw/src/main/scala/fp2.scala:158:3: expected class or object definition[0m
-[0m[[0m[31merror[0m] [0m[0m  def firstNumGreaterThan (a : Int, xs : List[Int]) : Int = {[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week3/hw/src/main/scala/fp2.scala:17:3: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m  def filter [A] (xs:List[A], f:A=>Boolean) : List[A] = {[0m
 [0m[[0m[31merror[0m] [0m[0m  ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week3/hw/src/main/scala/fp2.scala:175:3: expected class or object definition[0m
-[0m[[0m[31merror[0m] [0m[0m  def firstIndexNumGreaterThan (a : Int, xs : List[Int]) : Int = {[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week3/hw/src/main/scala/fp2.scala:29:3: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m  def append [A] (xs:List[A], ys:List[A]) : List[A] = {[0m
 [0m[[0m[31merror[0m] [0m[0m  ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week3/hw/src/main/scala/fp2.scala:179:3: expected class or object definition[0m
-[0m[[0m[31merror[0m] [0m[0m  def index(a:Int,xs:List[Int]): Int ={[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week3/hw/src/main/scala/fp2.scala:45:3: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m  def flatten [A] (xss:List[List[A]]) : List[A] = {[0m
 [0m[[0m[31merror[0m] [0m[0m  ^[0m
-[0m[[0m[31merror[0m] [0m[0m5 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week3/hw/src/main/scala/fp2.scala:59:3: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m  def foldLeft [A,B] (xs:List[A], e:B, f:(B,A)=>B) : B = {[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week3/hw/src/main/scala/fp2.scala:74:3: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0m  def foldRight [A,B] (xs:List[A], e:B, f:(A,B)=>B) : B = {[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week3/hw/src/main/scala/fp2.scala:95:1: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0mdef joinTerminateRight (xs : List[String], term : String) : String = {[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week3/hw/src/main/scala/fp2.scala:114:1: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0mdef joinTerminateLeft (xs : List[String], term : String) : String = {[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m8 errors found[0m

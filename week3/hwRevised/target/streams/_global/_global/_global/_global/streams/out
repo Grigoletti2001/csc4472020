@@ -1,0 +1,82 @@
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [hwrevised / Test / testOnly] Found inputs: /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/*.{java,scala},/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/java/**/*.{java,scala},/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/resources/**/*,/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/**/*.{java,scala},/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala-2.13/**/*.{java,scala},/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/test/java/**/*.{java,scala},/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/test/resources/**/*,/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/test/scala/**/*.{java,scala},/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/test/scala-2.13/**/*.{java,scala}[0m
+[0m[[0m[0minfo[0m] [0m[0m1. Monitoring source files for hwrevised/testOnly fp2tests...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m
+[0m[[0m[0mdebug[0m] [0m[0mhwrevised / Test / testOnly - Accepted event for /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived Update(/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreating update event for modified /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala (previous stamp: Hash(6f31b76d0f853102ec68d48e412317425bd812a0), current stamp: Hash(6f4514a454e21acf50e23b6124884dad17fed402))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived file event actions: /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala -> Trigger. Returning: (Update(/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala, 2020-Sep-27 00:11:17.454 CT),Trigger)[0m
+[0m[[0m[0minfo[0m] [0m[0mBuild triggered by /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala. Running 'testOnly fp2tests'.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received file event Trigger for Update(/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala, 2020-Sep-27 00:11:17.454 CT).[0m
+[0m[[0m[0minfo[0m] [0m[0m2. Monitoring source files for hwrevised/testOnly fp2tests...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m
+[0m[[0m[0mdebug[0m] [0m[0mhwrevised / Test / testOnly - Accepted event for /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived Update(/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreating update event for modified /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala (previous stamp: Hash(6f4514a454e21acf50e23b6124884dad17fed402), current stamp: Hash(a65bf1f61012d49e1a2d2477dc77382d3d016915))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived file event actions: /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala -> Trigger. Returning: (Update(/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala, 2020-Sep-27 00:11:45.465 CT),Trigger)[0m
+[0m[[0m[0minfo[0m] [0m[0mBuild triggered by /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala. Running 'testOnly fp2tests'.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received file event Trigger for Update(/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala, 2020-Sep-27 00:11:45.465 CT).[0m
+[0m[[0m[0minfo[0m] [0m[0m3. Monitoring source files for hwrevised/testOnly fp2tests...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received input event: ShowOptions.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received input event: ShowOptions.[0m
+[0m[[0m[0minfo[0m] [0m[0mOptions:[0m
+[0m[[0m[0minfo[0m] [0m[0m  <ctrl-d> : interrupt (exits sbt in batch mode)[0m
+[0m[[0m[0minfo[0m] [0m[0m  <enter>  : interrupt (exits sbt in batch mode)[0m
+[0m[[0m[0minfo[0m] [0m[0m  '?'      : print options[0m
+[0m[[0m[0minfo[0m] [0m[0m  'q'      : quit sbt[0m
+[0m[[0m[0minfo[0m] [0m[0m  'r'      : re-run the command[0m
+[0m[[0m[0minfo[0m] [0m[0m  's'      : return to shell[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received input event: Trigger.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received input event: Trigger.[0m
+[0m[[0m[0minfo[0m] [0m[0m4. Monitoring source files for hwrevised/testOnly fp2tests...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received input event: Trigger.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received input event: Trigger.[0m
+[0m[[0m[0minfo[0m] [0m[0m5. Monitoring source files for hwrevised/testOnly fp2tests...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m
+[0m[[0m[0mdebug[0m] [0m[0mhwrevised / Test / testOnly - Accepted event for /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived Update(/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreating update event for modified /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala (previous stamp: Hash(a65bf1f61012d49e1a2d2477dc77382d3d016915), current stamp: Hash(358126b4075ccd3c16f243f0064fba66795612e8))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived file event actions: /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala -> Trigger. Returning: (Update(/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala, 2020-Sep-27 00:15:18.112 CT),Trigger)[0m
+[0m[[0m[0minfo[0m] [0m[0mBuild triggered by /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala. Running 'testOnly fp2tests'.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received file event Trigger for Update(/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala, 2020-Sep-27 00:15:18.112 CT).[0m
+[0m[[0m[0minfo[0m] [0m[0m6. Monitoring source files for hwrevised/testOnly fp2tests...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m
+[0m[[0m[0mdebug[0m] [0m[0mhwrevised / Test / testOnly - Accepted event for /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived Update(/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreating update event for modified /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala (previous stamp: Hash(358126b4075ccd3c16f243f0064fba66795612e8), current stamp: Hash(0c3da1684a56e412bded4dbbc965710a3219d5cd))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived file event actions: /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala -> Trigger. Returning: (Update(/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala, 2020-Sep-27 00:16:10.414 CT),Trigger)[0m
+[0m[[0m[0minfo[0m] [0m[0mBuild triggered by /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala. Running 'testOnly fp2tests'.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received file event Trigger for Update(/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala, 2020-Sep-27 00:16:10.414 CT).[0m
+[0m[[0m[0minfo[0m] [0m[0m7. Monitoring source files for hwrevised/testOnly fp2tests...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m
+[0m[[0m[0mdebug[0m] [0m[0mhwrevised / Test / testOnly - Accepted event for /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived Update(/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreating update event for modified /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala (previous stamp: Hash(0c3da1684a56e412bded4dbbc965710a3219d5cd), current stamp: Hash(670a55e687b99daa22cf19e4e71666c2bfe05a0f))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived file event actions: /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala -> Trigger. Returning: (Update(/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala, 2020-Sep-27 00:16:30.519 CT),Trigger)[0m
+[0m[[0m[0minfo[0m] [0m[0mBuild triggered by /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala. Running 'testOnly fp2tests'.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received file event Trigger for Update(/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala, 2020-Sep-27 00:16:30.519 CT).[0m
+[0m[[0m[0minfo[0m] [0m[0m8. Monitoring source files for hwrevised/testOnly fp2tests...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m
+[0m[[0m[0mdebug[0m] [0m[0mhwrevised / Test / testOnly - Accepted event for /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived Update(/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala,FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false),FileAttributes(isDirectory = false, isOther = false,isRegularFile = true, isSymbolicLink = false))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived event for path /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreating update event for modified /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala (previous stamp: Hash(670a55e687b99daa22cf19e4e71666c2bfe05a0f), current stamp: Hash(82f935e77354e1d9d6543f6a3f3e0e4782d664a7))[0m
+[0m[[0m[0mdebug[0m] [0m[0mReceived file event actions: /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala -> Trigger. Returning: (Update(/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala, 2020-Sep-27 00:16:53.170 CT),Trigger)[0m
+[0m[[0m[0minfo[0m] [0m[0mBuild triggered by /Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala. Running 'testOnly fp2tests'.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received file event Trigger for Update(/Users/josephgrigolettiii/Github/programmingLanguages/week3/hwRevised/src/main/scala/fp2.scala, 2020-Sep-27 00:16:53.170 CT).[0m
+[0m[[0m[0minfo[0m] [0m[0m9. Monitoring source files for hwrevised/testOnly fp2tests...[0m
+[0m[[0m[0minfo[0m] [0m[0m   Press <enter> to interrupt or '?' for more options.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received input event: Run().[0m
+[0m[[0m[0mdebug[0m] [0m[0m[watch] [debug] Received input event: Run().[0m
