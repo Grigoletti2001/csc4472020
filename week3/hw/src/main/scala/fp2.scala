@@ -36,9 +36,8 @@ object fp2 {
   def map [A,B] (xs:List[A], f:A=>B) : List[B] = {
    xs match {
      case Nil => Nil
-        case b::bs => b(x) :: map (bs,f)
-   }
-
+        case y::ys => y(x) :: map (ys,f)
+  }
   }
 
   // EXERCISE 2: complete the following recursive definition of a "filter" function
@@ -46,10 +45,10 @@ object fp2 {
   // Your implementation of "filter" MUST be recursive.
   def filter [A] (xs:List[A], f:A=>Boolean) : List[A] = {
     // TODO: Provide definition here.
-    null
-
-
-
+    xs match {
+      case Nil => Nil 
+      case y::ys => if(f(y)) y::filter(ys,f) else filter(ys,f)
+        }
   }
 
   // EXERCISE 3: complete the following recursive definition of an "append" function
