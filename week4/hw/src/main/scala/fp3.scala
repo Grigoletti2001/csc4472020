@@ -37,8 +37,16 @@ object fp3 {
   // - member (5, List (4, 6, 8, 5)) == true
   // - member (3, List (4, 6, 8, 5)) == false
   def member (a : Int, xs : List[Int]) : Boolean = {
-    // TODO: Provide definition here.
-    false
+      xs match {
+        case Nil => false
+        case j::js => 
+            if (j==a) {
+              true
+            } else {
+              member(a,js)
+          }
+      }
+    
   }
 
   // EXERCISE 2: complete the following recursive definition of an "allEqual" function
@@ -51,8 +59,13 @@ object fp3 {
   // - allEqual (List (5, 5, 6, 5)) == false
   // - allEqual (List (5, 5, 5, 6)) == false
   def allEqual (xs : List[Int]) : Boolean = {
-    // TODO: Provide definition here.
-    false
+   
+    xs match {
+      xs match {
+	case Nil => return true
+	case x::Nil => return true
+	case x::xs => if (x == xs.head) allEqual(xs.tail) else return false
+	}
   }
 
   // EXERCISE 3: complete the definition of the following function that computes the length of
