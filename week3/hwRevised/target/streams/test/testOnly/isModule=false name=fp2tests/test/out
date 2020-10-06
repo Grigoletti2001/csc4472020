@@ -1,0 +1,11 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mfp2tests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX01 - map[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX02 - filter[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX03 - append[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX04 - flatten[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX05 - foldLeft[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX06 - foldRight[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX07 - joinTerminateRight[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX08 - joinTerminateLeft[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX09 - firstNumGreaterThan[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX10 - firstIndexNumGreaterThan[0m[0m
