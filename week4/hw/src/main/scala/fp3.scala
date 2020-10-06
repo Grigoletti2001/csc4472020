@@ -119,8 +119,13 @@ object fp3 {
   // EXAMPLE:
   // - removeDupes1 (List (1,1,2,3,3,3,4,4,5,6,7,7,8,9,2,2,2,9)) == List (1,2,3,4,5,6,7,8,9,2,9)
   def removeDupes1 [X] (xs:List[X]) : List[X] = {
-    // TODO: Provide definition here.
-    null
+   
+xs match {
+  case Nil => Nil
+  case x:: Nil => List(x)
+  case x::xs => if (x == xs.head) removeDupes1(xs) else x::removeDupes1(xs)
+        }
+
   }
 
 
