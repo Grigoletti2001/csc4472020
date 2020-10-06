@@ -137,10 +137,15 @@ xs match {
   // list.
   // EXAMPLE:
   // - removeDupes2 (List (1,1,2,3,3,3,4,4,5,6,7,7,8,9,2,2,2,9)) == List ((2,1),(1,2),(3,3),(2,4),(1,5),(1,6),(2,7),(1,8),(1,9),(3,2),(1,9))
-  def removeDupes2 [X] (xs:List[X]) : List[(Int, X)] = {
-    // TODO: Provide definition here.
-    null
+    def removeDupes2 [X] (xs:List[X]) : List[(Int, X)] = {
+    xs.foldRight(List[List[X]]()){
+      (e, l) => l match {
+        case (`e` :: xs) :: fs => (e :: e :: xs) :: fs
+        case _ => List(e) :: l
+      }
+    }.map(f=> (f.length, f.head))
   }
+
 
 
 
