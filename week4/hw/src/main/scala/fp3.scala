@@ -77,8 +77,10 @@ object fp3 {
   // You must not use recursion directly in the function.  You can use the "map" method 
   // of the List class.
   def stringLengths (xs:List[String]) : List[(String, Int)] = {
-    // TODO: Provide definition here.
-    null
+   
+   xs.map (x=> (x,x.length))
+
+
   }
 
   // EXERCISE 4: complete the function definition for "delete1" that takes
