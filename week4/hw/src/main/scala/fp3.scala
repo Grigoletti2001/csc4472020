@@ -89,18 +89,19 @@ object fp3 {
   // "delete1" MUST be recursive.
   // EXAMPLE:
   // - delete1 ("the", List ("the","the","was","a","product","of","the","1980s")) == List ("was","a","product","of","1980s")
-  def delete1 [X] (x:X, ys:List[X]) : List[X] = {
-    // TODO: Provide definition here.
-    null
+   def delete1 [X] (x:X, ys:List[X]) : List[X] = {
+    ys match{
+      case Nil => Nil
+      case y::ys => if(y==x) delete1(y,ys) else y::delete1(x,ys)
+    }
   }
 
 
   // EXERCISE 5: complete the function definition for "delete2" below.  It must 
   // have the same behavior as "delete1".  It must be written using "for comprehensions" 
   // and not use recursion explicitly.
-  def delete2 [X] (x:X, ys:List[X]) : List[X] = {
-    // TODO: Provide definition here.
-    null
+   def delete2 [X] (x:X, ys:List[X]) : List[X] = {
+    for(a <- ys; if (a != x)) yield a
   }
 
   // EXERCISE 6: complete the function definition for "delete3" below.  It must 
