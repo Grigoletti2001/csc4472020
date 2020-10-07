@@ -27,3 +27,5 @@ compile
 console
 compile
 console
+ls
+testOnly fp3tests
