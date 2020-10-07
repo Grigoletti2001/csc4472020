@@ -1,4 +1,4 @@
-object fp3 {
+ object fp3 {
 
   // EXERCISE 1: 
   def member (a : Int, xs : List[Int]) : Boolean = {
