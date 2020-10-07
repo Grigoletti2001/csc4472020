@@ -28,22 +28,22 @@
 [0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week4/hw/src/main/scala/fp1.scala:77:3: expected class or object definition[0m
 [0m[[0m[31merror[0m] [0m[0m  def max (xs : List[Int]) : Int = {[0m
 [0m[[0m[31merror[0m] [0m[0m  ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week4/hw/src/main/scala/fp3.scala:64:7: 'case' expected but identifier found.[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week4/hw/src/main/scala/fp3.scala:58:7: 'case' expected but identifier found.[0m
 [0m[[0m[31merror[0m] [0m[0m      xs match {[0m
 [0m[[0m[31merror[0m] [0m[0m      ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week4/hw/src/main/scala/fp3.scala:65:2: Missing closing brace `}` assumed here[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week4/hw/src/main/scala/fp3.scala:59:2: Missing closing brace `}` assumed here[0m
 [0m[[0m[31merror[0m] [0m[0m	case Nil => return true[0m
 [0m[[0m[31merror[0m] [0m[0m	^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week4/hw/src/main/scala/fp3.scala:65:1: '}' expected.[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week4/hw/src/main/scala/fp3.scala:59:1: '}' expected.[0m
 [0m[[0m[31merror[0m] [0m[0m	case Nil => return true[0m
 [0m[[0m[31merror[0m] [0m[0m^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week4/hw/src/main/scala/fp3.scala:66:2: illegal start of definition[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week4/hw/src/main/scala/fp3.scala:60:2: illegal start of definition[0m
 [0m[[0m[31merror[0m] [0m[0m	case x::Nil => return true[0m
 [0m[[0m[31merror[0m] [0m[0m	^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week4/hw/src/main/scala/fp3.scala:67:2: illegal start of definition[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week4/hw/src/main/scala/fp3.scala:61:2: illegal start of definition[0m
 [0m[[0m[31merror[0m] [0m[0m	case x::xs => if (x == xs.head) allEqual(xs.tail) else return false[0m
 [0m[[0m[31merror[0m] [0m[0m	^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week4/hw/src/main/scala/fp3.scala:69:3: eof expected but '}' found.[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/josephgrigolettiii/Github/programmingLanguages/week4/hw/src/main/scala/fp3.scala:63:3: eof expected but '}' found.[0m
 [0m[[0m[31merror[0m] [0m[0m  }[0m
 [0m[[0m[31merror[0m] [0m[0m  ^[0m
 [0m[[0m[31merror[0m] [0m[0m16 errors found[0m

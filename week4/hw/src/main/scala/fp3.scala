@@ -37,16 +37,10 @@ object fp3 {
   // - member (5, List (4, 6, 8, 5)) == true
   // - member (3, List (4, 6, 8, 5)) == false
   def member (a : Int, xs : List[Int]) : Boolean = {
-      xs match {
-        case Nil => false
-        case j::js => 
-            if (j==a) {
-              true
-            } else {
-              member(a,js)
-          }
-      }
-    
+    xs match {
+      case Nil => return false
+      case x::xs => if (a == x) return true else member(a,xs)
+    }
   }
 
   // EXERCISE 2: complete the following recursive definition of an "allEqual" function
@@ -168,8 +162,14 @@ xs match {
   // (because that would entail one traversal of the list with "take"
   // and then a second traversal with "drop").
   def splitAt [X] (n:Int, xs:List[X]) : (List[X], List[X]) = {
-    // TODO: Provide definition here.
-    null
+    (n,xs) match{
+      case(_,Nil) => (Nil,Nil)
+      case (-1,xs) => (List(),xs)
+      case (n,x::xs) => {
+        val(lista,listb) = splitAt(n-1,xs)
+        if(n>0) (x::lista,listb)
+        else (lista,x::listb)}
+    }
   }
 
 
@@ -181,9 +181,11 @@ xs match {
   // - allDistinct (List (1,2,3,4,5)) == true
   // - allDistinct (List (1,2,3,4,5,1)) == false
   // - allDistinct (List (1,2,3,2,4,5)) == false
-  def allDistinct (xs : List[Int]) : Boolean = {
-    // TODO: Provide definition here.
-    false
+ def allDistinct (xs : List[Int]) : Boolean = {
+    xs match{
+      case Nil => return true
+      case x::xs => if(member(x,xs)) return false else allDistinct(xs)
+    }
   }
 }
 
