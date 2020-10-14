@@ -1,0 +1,259 @@
+2 Java
+2.1 Java Parametric Polymorphism Linked Lists
+Write a Java linked list class that uses parametric polymorphism. There should be a Node class with a type parameter, i.e., Node<X>.
+
+Add code to calculate the length of such a list and to test your length function. Try compiling and running it.
+
+Solution: Java Parametric Polymorphism Linked Lists
+
+
+
+
+
+
+
+----------------
+
+3 Scala - Functional Programming
+3.1 Builtin Control Structures - While Loops
+Use a while loop in Scala to print each element of a linked list. Use a var with a copy of the argument because parameter bindings are val. You do not need to use pattern-matching for this function, but you would normally use pattern-matching in Scala.
+
+def printList [X] (xs:List[X]) : Unit = {
+  var tmp = xs
+  ...
+}
+Solution: Scala - Builtin Control Structures - While Loops
+
+
+
+
+
+
+
+
+
+
+--------------------
+
+3.2 Common Higher-Order Functions
+Write Scala functions that take a list of integers xs:List[Int] as a parameter and:
+
+print each integer in xs (use the method foreach from the List class)
+create a new list with the squares of each integer from xs (use the method map from the List class)
+create a new list containing the odd numbers from xs (use the method filter from the List class)
+return an Option[Int] with the first integer greater than or equal to 5 if it exists in xs (use the method find from the List class; look in the Scala API documentation!)
+count the number of integers greater than or equal to 5 in xs (use the method count from the List class; look in the Scala API documentation!)
+return a Boolean indicating whether there are any integers greater than or equal to 5 in xs (use the method exists from the List class; look in the Scala API documentation!)
+return a Boolean indicating whether all integers in xs are greater than or equal to 5 (use the method forall from the List class; look in the Scala API documentation!)
+Solution: Scala - Common Higher-Order Functions
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------
+
+3.3 Control Structures - For Expressions
+Retype, compile, and run the following Java programs using the for statement:
+
+public class For1 {
+  public static void main (String[] args) {
+    for (int i = 0; i < args.length; i++) {
+      System.out.println (args[i]);
+    }
+  }
+}
+public class For2 {
+  public static void main (String[] args) {
+    for (int i = 0; i < args.length; i++) {
+      String arg = args[i];
+      System.out.println (arg);
+    }
+  }
+}
+public class For3 {
+  public static void main (String[] args) {
+    for (String arg : args) {
+      System.out.println (arg);
+    }
+  }
+}
+Run them using several arguments on the command line, e.g.,
+
+$ java For3 the rain in spain
+the
+rain
+in
+spain
+Note that the first two programs use the traditional for statement as found in the C programming language. The last program uses an "enhanced" for statement that works on any data structure implementing the correct iteration interfaces.
+
+These Java programs correspond to the next three Python programs. In particular, the Python for statement corresponds to Java's "enhanced" for statement not the traditional for statement from the C programming language.
+
+import sys
+
+i = 1
+while i < len (sys.argv):
+    print (sys.argv[i])
+    i = i + 1
+import sys
+
+i = 1
+while i < len (sys.argv):
+    arg = sys.argv[i]
+    print (arg)
+    i = i + 1
+import sys
+
+for arg in sys.argv[1:]:
+    print (arg)
+Run them using, e.g.,
+
+$ python3 for3.py the rain in spain
+the
+rain
+in
+spain
+Scala's for expression can be used like Java's "enhanced" for statement or Python's for statement. Try this code in the Scala console.
+
+for (x <- List (1, 2, 3, 4)) println (x)
+The numbers 1 to 4 are printed as a side-effect (try it!).
+
+But Scala's for expression is an expression, so what type does it have? Find out by running this in the Scala console:
+
+val result = for (x <- List (1, 2, 3, 4)) println (x)
+This type means that there is no interesting value, so the for expression is behaving like the Java and Python versions.
+
+But if we add the yield keyword, we can get useful values out of a Scala for expression. Try running this code in the Scala console:
+
+val result = for (x <- List (1, 2, 3, 4)) yield x
+What is the type of result?
+
+We can "yield" other expressions. Try running each of these expressions in the Scala console:
+
+val result = for (x <- List (1, 2, 3, 4)) yield 2 * x
+
+val result = for (x <- List (1, 2, 3, 4)) yield x + " potato"
+
+val result = for (x <- List (1, 2, 3, 4)) yield List (2 * x)
+Note that the type of result in each case has the form List[A] where A is the type of the expression after yield. I.e., x is taking values from List (1,2,3,4) : List[Int] so x has type Int. Then the expression (x + " potato") has type String, so the type of result is List[String] for the second for expression above.
+
+Now look at the following Scala code and figure out what type xs and result have. Try running the code to confirm your answer.
+
+val result = for (xs <- List (List (1, 2, 3, 4), List (5, 6, 7), List (8), List ())) yield xs
+We can perform a nested loop over a list of lists without yield like this:
+
+val result = for (xs <- List (List (1, 2, 3, 4), List (5, 6, 7), List (8), List ())) { for (x <- xs) println (x) }
+or with indentation:
+
+val result = for (xs <- List (List (1, 2, 3, 4), List (5, 6, 7), List (8), List ())) { 
+  for (x <- xs) {
+    println (x) 
+  }
+}
+When running we have, execution proceeds as normal for a loop within a loop, and variable bindings are:
+
+outer loop: xs has value List (1, 2, 3, 4)
+x has value 1
+x has value 2
+x has value 3
+x has value 4
+outer loop: xs has value List (5, 6, 7)
+x has value 5
+x has value 6
+x has value 7
+outer loop: xs has value List (8)
+x has value 8
+outer loop: xs has value List ()
+If we want to change the elements inside the list of lists, we can. Try running this code in the Scala console:
+
+val result = for (xs <- List (List (1, 2, 3, 4), List (5, 6, 7), List (8), List ())) yield { for (x <- xs) yield 2 * x }
+If we want to flatten a list of lists, we can do so using multiple arrows for one for statement:
+
+val result = for (xs <- List (List (1, 2, 3, 4), List (5, 6, 7), List (8), List ()); x <- xs) yield x
+This should be treated like the previous nested loops in the sense that xs has type List[Int] and x has type Int (since its elements come from xs : List[Int]. However, the type of result is List[Int] not List[List[Int]] because the expression after yield is x which has type Int. That is, running this code produces:
+
+result: List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8)
+and not:
+
+result: List[List[Int]] = List (List (1, 2, 3, 4), List (5, 6, 7), List (8), List ())
+It may help to think of the Scala code:
+
+val result = for (xs <- List (List (1, 2, 3, 4), List (5, 6, 7), List (8), List ()); x <- xs) yield x
+as behaving like:
+
+var result : List[Int] = List ()
+for (xs <- List (List (1, 2, 3, 4), List (5, 6, 7), List (8), List ())) {
+  for (x <- xs) {
+    result = result ::: List (x)
+  }
+}
+or using Java's mutable lists that add at the end of the list:
+
+var result : java.util.List[Int] = new java.util.ArrayList[Int]
+for (xs <- List (List (1, 2, 3, 4), List (5, 6, 7), List (8), List ())) {
+  for (x <- xs) {
+    result.add (x)
+  }
+}
+Finally, notice that the expressions on the right-hand side of each arrow can be arbitrary, not simply a variable or list. Try running the following expressions in the Scala console:
+
+val result = for (xs <- List (List (1, 2, 3, 4), List (5, 6, 7), List (8), List ()); x <- xs.reverse) yield x
+
+val result = for (xs <- List (List (1, 2, 3, 4), List (5, 6, 7), List (8), List ()).reverse; x <- xs) yield x
+
+val result = for (xs <- List (List (1, 2, 3, 4), List (5, 6, 7), List (8), List ()).reverse; x <- xs.reverse) yield x
+
+val result = (for (xs <- List (List (1, 2, 3, 4), List (5, 6, 7), List (8), List ()); x <- xs) yield x).reverse
+
+val result = for (x <- List (1, 2, 3, 4); y <- (1 to x).toList) yield y
+3.4 Scala Types
+What are the missing types in the following functions (work out the values of each ???)?
+
+Confirm your answers by filling in the missing types and pasting the function definition into the Scala console.
+
+def cons [X] (x:???, xs:???) : ??? = x::xs
+
+def append [X] (xs:???, ys:???) : ??? = xs:::ys
+
+def map [X,Y] (xs:???, f:???) : ??? = {
+  xs match {
+    case Nil   => Nil
+    case y::ys => f(y) :: map(ys, f)
+  }
+}
+
+def filter [X] (xs:???, f:???) : ??? = {
+  xs match {
+    case Nil            => Nil
+    case y::ys if f (y) => y :: filter (ys, f)
+    case _::ys          => filter (ys, f)
+  }
+}
+
+def exists [X] (xs:???, p:???) : ??? = {
+  xs match {
+    case Nil       => false
+    case (x :: xs) => p (x) || exists (xs, p)
+  }
+}
+
+def flatten [X] (xss:???) : ??? = for (xs <- xss; x <- xs) yield x
+Solution: Scala Types
+
+
+
+
+
+
+
+
+
+
+---------------------------------

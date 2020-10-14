@@ -1,0 +1,421 @@
+3 Prerequisite: Basics
+3.1 Text Editor
+If you do not already have one, get a text editor for your computer and try it out. If you are comfortable with using an Integrated Development Environment (IDE) such as Eclipse or IntelliJ IDEA, that will do, but you may want to look at a standalone text editor also, since they tend to be much more lightweight.
+
+No matter what, do not use a word processor such as Microsoft Word to edit code. Yes, this does happen sometimes.
+
+Suggested text editors to try:
+
+Visual studio code (nice plugins for scala and other languages)
+Notepad++ for Windows
+TextPad for Windows
+Old school text editors with a longer learning curve:
+
+Emacs
+VIM
+If you have another good text editor, feel free to share on the forum.
+
+3.2 Console / Terminal
+Open a console / terminal on your computer.
+
+For Windows, use the builtin "Command Prompt" (cmd.exe). The more adventurous might try the bash shell from Cygwin, or Windows PowerShell.
+For Linux, open whichever terminal program came with your system. That terminal program will probably run the bash shell, unless you have configured it to use a different shell program.
+For OS X, use the builtin "Terminal". It will run the bash shell by default.
+Verify that you can change directories (with cd), create directories (with mkdir), list directories (with ls or dir), etc.
+
+Terminology: Windows uses the term "console". Linux, OS X, and others more typically use "terminal"; moreover, a shell program such as bash reads commands from the terminal, so we might say "open a shell" or "get a shell window" rather than "open a terminal".
+
+3.3 Press TAB to Autocomplete
+In the Command Prompt and terminal, you can often press TAB to autocomplete.
+
+There are different behaviors when autocompletion is used with multiple entries, e.g., multiple files/directories with the same prefix
+
+Autocompletion in Command Prompt (Windows) cycles through the entries.
+Autocompletion in bash (Linux and OS X) does a partial completion; if you press TAB a second time, it will show you the possible completions. Type some more of the name you want, and then press TAB a third time.
+Using TAB liberally will make your command-line interactions significantly faster.
+
+3.4 Environmental Variables
+Environmental variables ("env var" for short) are supported on Windows, Linux, and OS X.
+
+Each process has a collection of environmental variables that you can think of as a map from variable name (a string) to a variable value (also a string).
+
+Examine the environmental variables on your system by running one of the following commands.
+
+For Windows, run set in a Command Prompt. For example:
+> set
+ALLUSERSPROFILE=C:\ProgramData
+APPDATA=C:\Users\bob\AppData\Roaming
+CommonProgramFiles=C:\Program Files\Common Files
+COMPUTERNAME=MSDOS
+ComSpec=C:\Windows\system32\cmd.exe
+FP_NO_HOST_CHECK=NO
+HOMEDRIVE=C:
+HOMEPATH=\Users\bob
+LOCALAPPDATA=C:\Users\bob\AppData\Local
+LOGONSERVER=\\MSDOS
+NUMBER_OF_PROCESSORS=1
+OS=Windows_NT
+Path=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PROCESSOR_ARCHITECTURE=x86
+ProgramData=C:\ProgramData
+ProgramFiles=C:\Program Files
+PROMPT=> 
+PSModulePath=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+PUBLIC=C:\Users\Public
+SESSIONNAME=Console
+SystemDrive=C:
+SystemRoot=C:\Windows
+TEMP=C:\Users\bob\AppData\Local\Temp
+TMP=C:\Users\bob\AppData\Local\Temp
+USERDOMAIN=msdos
+USERDOMAIN_ROAMINGPROFILE=msdos
+USERNAME=bob
+USERPROFILE=C:\Users\bob
+windir=C:\Windows
+Note: The standard last character in prompts for the Windows Command Prompt program is >. You should not type the >; just the set
+
+Note: These instructions are for the windows Command Prompt, not the Powershell or Linux subsystem for windows (bash). Powershell uses different syntax. bash is the same shell that is used on macOS and Linux; see below for how to use it.
+
+For Linux and OS X, run env or env | sort in a terminal. The latter form sorts the output by variable name. For example:
+$ env | sort
+BROWSER=/usr/bin/chrome
+DISPLAY=:0
+EDITOR=/usr/bin/vim
+HOME=/home/bob
+HUSHLOGIN=TRUE
+LANG=en_US.UTF-8
+LESSCLOSE=/usr/bin/lesspipe %s %s
+LESSOPEN=| /usr/bin/lesspipe %s
+LOGNAME=bob
+MAIL=/var/mail/bob
+PAGER=/usr/bin/less
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+PWD=/home/bob
+SHELL=/bin/bash
+SHLVL=3
+TERM=xterm
+USER=bob
+_=/usr/bin/env
+XAUTHORITY=/home/bob/.Xauthority
+Note: The $ character is the standard last character in prompts for shell programs. You should not type the $; just the env | sort
+
+3.5 Setting an Environmental Variable
+Show that the environmental variable FOO is initially not set, then set it to have value bar, show that it is set, update its value to baz, then unset it.
+
+For Windows, run the following in a Command Prompt:
+> echo %FOO%
+%FOO%
+
+> set FOO=bar
+
+> echo %FOO%
+bar
+
+> set FOO=baz
+
+> echo %FOO%
+baz
+
+> set FOO
+FOO=baz
+
+> echo %FOO%
+baz
+
+> set FOO=
+
+> echo %FOO%
+%FOO%
+For Linux and OS X, run the following in a terminal:
+$ echo ${FOO}
+
+$ export FOO=bar
+
+$ echo ${FOO}
+bar
+
+$ FOO=baz
+
+$ echo ${FOO}
+baz
+
+$ unset FOO
+
+$ echo ${FOO}
+Now (for all operating systems) repeat this, but do not unset FOO at the end. Close the Command Prompt / terminal and then open a new one. Is FOO set in the new terminal?
+
+3.6 Home Directory
+On Linux and OS X, your home directory probably has the form /home/bob or /Users/bob; this is stored in the HOME environmental variable. The home directory has some special support:
+
+You can change to your home directory quickly by just running cd with no directory specified.
+You can refer to your home directory by ~. For example, mkdir -p ~/doc/mynotes creates a doc/mynotes hierarchy of directories in your home directory.
+3.7 Spaces in Environmental Variables
+Spaces in environmental variable values can cause problems if they are not surrounded by quotes properly. A single value hello world with a space in it can end up being treated as two distinct values hello and world.
+
+This often arises with paths that contain spaces. For this reason, try to avoid spaces in path names.
+
+Try these illustrative examples:
+
+For Windows:
+> mkdir "hello world"
+
+> set FOO=hello world
+
+> echo %FOO%
+hello world
+
+> rmdir %FOO%
+The system cannot find the file specified.
+The system cannot find the file specified.
+
+> rmdir "%FOO%"
+For Linux and OS X:
+$ mkdir "hello world"
+
+$ export FOO=hello world
+
+$ echo ${FOO}
+hello
+
+$ export FOO="hello world"
+
+$ echo ${FOO}
+hello world
+
+$ rmdir ${FOO}
+rmdir: failed to remove ‘hello’: No such file or directory
+rmdir: failed to remove ‘world’: No such file or directory
+
+$ rmdir "${FOO}"
+3.8 PATH environmental variable
+Some environmental variables contain a single path, e.g., C:\Users\bob or /home/bob.
+
+Other environmental variables contain a sequence of paths, e.g., C:\Users\alice;C:\Users\bob;C:\Users\charlie or /home/alice:/home/bob:/home/charlie. The character between paths is called the path delimiter. The path delimiter character for Windows is the semicolon ;. The path delimiter character for Linux and OS X is the colon :.
+
+The PATH environmental variable contains a sequence of paths. This sequence is used to determine which executable is invoked when you enter a command. When you enter a command, the Command Prompt / shell looks for an executable with that name in the directory specified by the first path in PATH. If no such executable is found, it continues to the second path in PATH, etc. If no executable is found, and all of the paths in PATH have been tried, the Command Prompt / shell reports that the command cannot be found.
+
+Aside: there are also builtin commands that do not rely on searching for an executable in PATH.
+
+Check the contents of your PATH environmental variable.
+
+On Windows, run either echo %PATH% or simply PATH.
+On Linux and OS X, run echo ${PATH}.
+When installing new development software, it may be necessary to add an entry to your PATH environmental variable. You can add a new entry before the other paths using:
+
+On Windows, run, e.g., PATH=c:\some\new\software;%PATH%
+On Linux and OS X, run, e.g., PATH=/some/new/software:${PATH}
+If there are executables in the software directory with the same name as others in PATH, the ones in software will take precedence.
+
+IMPORTANT: making changes to PATH in the Command Prompt / terminal will not persist, i.e., they do not affect other Command Prompt / terminal windows that you open in the future. This is useful because any mistakes are forgotten when you close the window.
+
+There are a number of ways to make the changes persistent, but we will instead describe how to record the changes in a file, and then apply them quickly.
+
+On Windows, use your text editor to create a file named setup.bat (a batch file) and fill it with:
+PATH=c:\some\new\software;%PATH%
+Then when you want to use the new PATH, open a Command Prompt, change directory to the directory containing setup.bat, and then run setup.bat. This will execute the commands in the batch file, changing the value of PATH in your current Command Prompt window.
+
+Note: it is not useful to double-click setup.bat from Windows Explorer, because it will open a new Command Prompt, run your batch file in the new Command Prompt, then exit the Command Prompt and so discard the changes!
+
+On Linux and OS X, use your text editor to create a file named setup.sh (a shellscript file) and fill it with:
+PATH=/some/new/software:${PATH}
+Then when you want to use the new PATH, open a terminal, change directory to the directory containing setup.sh, and then run source ./setup.sh. This will execute the commands in the shellscript file, changing the value of PATH in your current terminal window.
+
+Note: you can also use the synonymous . ./setup.sh. But you cannot use ./setup.sh because that creates a second shell process to run your shellscript, and changes to PATH in that second shell process are discarded when it has finished processing the shellscript file.
+
+4 Prerequisite: Java
+4.1 Java SDK
+Check that you have the Java Standard Edition (SE) Development Kit (SDK) by opening a console / terminal and running the following command. You should see something beginning with "1.8" or "11". The minor version is not important for this class, although it is advisable to use a recent version for security reasons.
+
+$ javac -version
+javac 1.8.0_60
+$ javac -version
+javac 11.0.6
+You can download java from Amazon.
+
+Java 8 or 11 are the best versions to use with Scala. If you have multiple versions of Java installed, you can switch between them using the Java console. On MacOS, this is found in the System Preferences.
+
+In bash on MacOS and linux, you can change the version seen in the current shell by executing
+
+$ export JAVA_HOME=`/usr/libexec/java_home -v 1.8` # java 8
+$ export JAVA_HOME=`/usr/libexec/java_home -v 11` # java 11
+4.2 Hello World
+Write a hello world program in Java. Your program should print "Hello world!" to the console / terminal, and then exit.
+
+Solution: Hello World in Java
+
+
+
+
+
+------------------
+5 Prerequisite: C
+5.1 C or C++ Compiler
+You can run code online using repl.it. You can see the assembly code produced by a compiler using godbolt.org.
+
+Mac and linux will come with gcc or clang preinstalled.
+
+On windows, you could try any of the following:
+
+mingw-w64
+Visual Studio Community
+Windows Subsystem for Linux
+5.2 Hello World
+Write a hello world program in C. Your program should print "Hello world!" to the console / terminal, and then exit.
+
+Compile your program with a C compiler, then run it from the console / terminal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------
+Solution: Hello World in C
+
+5.3 Pointers
+Consider the following C program. Replace the comments with code, so that the value of x is 10 when it is printed.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void update (int* p) {
+  /* TODO */
+}
+
+int main () {
+  int x = 5;
+  update (/* TODO */);
+  printf ("%d\n", x);
+}
+
+
+
+
+
+
+
+
+
+
+---------------------
+Solution: Pointers
+
+5.4 Allocation Location
+Consider the following C program.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int x = 5;
+
+int main () {
+  int y = 10;
+  int* p = (int*) malloc (sizeof (int));
+}
+Answer the following questions:
+
+Where in memory is x allocated?
+Where in memory is y allocated?
+Where in memory is p allocated?
+Where in memory is p pointing to?
+Solution: Allocation Location
+
+
+
+
+
+
+
+
+
+-------
+5.5 Call-Stack Allocation
+Consider the following C program.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void countdown (int n) {
+  if (n <= 0) {
+    printf ("done\n");
+  } else {
+    printf ("counting down\n");
+    countdown (n - 1);
+  }
+}
+
+int main () {
+  countdown (5);
+}
+When it is executed:
+
+What will be printed?
+What is the maximum number of activation records (also known as stack frames) on the call stack at one point during execution?
+Solution: Call-Stack Allocation
+
+
+
+
+
+
+
+
+
+
+------
+5.6 Dangling Pointer
+Consider the following two C programs. Which one of these programs is problematic and why?
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int foo (int n) {
+  int result = 2 * n;
+  return result;
+}
+
+int main () {
+  int x = foo (5);
+  int y = foo (7);
+  printf ("%d\n", x);
+  printf ("%d\n", y);
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int* foo (int n) {
+  int result = 2 * n;
+  return &result;
+}
+
+int main () {
+  int* p = foo (5);
+  int* q = foo (7);
+  printf ("%p %d\n", p, *p);
+  printf ("%p %d\n", q, *q);  
+}
+
+
+Solution: Dangling Pointer
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------

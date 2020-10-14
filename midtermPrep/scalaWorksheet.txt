@@ -1,0 +1,288 @@
+4 Scala
+4.1 Install SBT
+SBT compiles and invokes tests on Java/Scala code
+On windows, install the msi installer for sbt from here Do not attempt to use sbt inside of the linux subsystem for windows. As of March 2017, it does not work.
+Alternatively, on windows you can also use a package manager such as scoop.
+$ scoop install sbt
+On Mac or Linux, use a package manager to do the install. On a mac, use homebrew. On Ubuntu, use apt-get.
+$ brew install sbt
+Change directory to your repository
+Use dir or ls to check build.sbt is in current directory
+Run: sbt
+The first time you do this, you will need to be connected to the internet
+4.2 Get the homework code from D2L
+If you have not yet unzipped the homework code from D2L, do so now (see homework fp1.scala).
+
+You will not be able to verify that your code compiles and passes tests without the tests contained in this zip file.
+
+4.3 Read Repository Instructions
+Browse the instructions in the README.html file in the top-level directory of the code you unzipped from D2L. You will need to refer to these instructions when you complete the assignment later.
+
+Each week you will complete one file from this zip file. In the first week it will be fp1.scala. You hand the homework in on D2L.
+
+4.4 Run SBT / Start Scala REPL
+Open a command prompt or terminal, then change directory to the top-level directory of your unzipped code.
+
+Verify that you have the file build.sbt in the current working directory. On a Linux or OS X system, it should look like this when you run ls and tree.
+
+$ ls
+README.html  build.sbt    src/
+$ tree
+.
+├── README.html
+├── build.sbt
+└── src
+    ├── main
+    │   └── scala
+    │       ├── argpass.scala
+    │       ├── dynamic.scala
+    │       ├── fp1.scala
+    │       ├── fp2.scala
+    │       ├── fp3.scala
+    │       ├── storage.scala
+    │       └── subtyping.scala
+    └── test
+        └── scala
+            ├── UnitSpec.scala
+            ├── argpasstests.scala
+            ├── dynamictests.scala
+            ├── fp1tests.scala
+            ├── fp2tests.scala
+            ├── fp3tests.scala
+            ├── storagetests.scala
+            └── subtypingtests.scala
+
+5 directories, 17 files
+Use dir for a command prompt on Windows; you should see the same files and directories.
+
+The file build.sbt contains instructions about how to build a project and other configuration information. When you start SBT, it uses the build.sbt file in the current working directory. This is very common for command-line build tools, but differs from GUI development systems.
+
+When you first run SBT, it will attempt to download the version of the Scala compiler specified in build.sbt and various other libraries. For this reason, you will need a network connection on the first run.
+
+Now run SBT by entering sbt at the command / shell prompt. You should see something like the following (the /tmp/assignments directory will be different for you).
+
+$ sbt
+[info] Loading project definition from /tmp/assignments/project
+...lots of output from downloading files...
+[info] Set current project to CSC447 Assignments (in build file:/tmp/assignments/)
+>
+The SBT prompt is >. You can enter SBT commands there, e.g., compile. See README.md for more examples.
+
+The only SBT command that we need at present is console. Enter the console command at the SBT prompt to start the Scala REPL. You should see something like the following.
+
+> console
+[info] Updating {file:/tmp/assignments/}assignments...
+[info] Resolving jline#jline;2.12 ...
+[info] Done updating.
+[info] Compiling 4 Scala sources to /tmp/assignments/target/scala-2.11/classes...
+[info] Starting scala interpreter...
+[info] 
+Welcome to Scala version 2.11.2 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_60).
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala>
+The Scala REPL prompt is scala>. You can enter Scala expressions and definitions at the Scala REPL prompt. Try this out by entering 1 + 2. You should see something like the following.
+
+scala> 1 + 2
+res0: Int = 3
+4.5 Literals and Arithmetic
+Write some Scala expressions for Boolean, integer, character, and String literals. Write some Scala expressions involving arithmetic. Try them in the Scala REPL.
+
+You can bind the expressions to variables:
+
+val x = true
+or just type them in directly:
+
+true
+Solution: Scala Literals and Arithmetic
+
+
+
+
+
+
+
+
+-----------------------
+
+4.6 REPL Tips
+Tips to improve REPL interaction:
+
+Try referring to one of the previous values in a new expression for the Scala REPL. E.g.,
+1 + (res0 * 2)
+Use command-line editing to pull up previous expressions and edit them in the REPL. Support varies between systems. Press the Up/Down arrow keys to scroll through REPL history. Press the Left/Right arrow keys to move through current expression (to edit).
+If you write Scala code in a text editor and then paste it into the REPL, you may end up with parsing ending too early. Either add curly braces to prevent parsing ending too early, or enter :paste into the REPL, paste, then press Control D to end pasting mode.
+4.7 Val And Var
+In the REPL, define a variable x using val and try to assign to it. What happens and why?
+In the REPL, define a variable x using var and try to assign to it. What happens and why?
+In the REPL, define a variable x using val without an initializing expression. Why does the REPL reject that?
+In the REPL, define a variable x using val. Then define another variable x using val with a different value. Why does the REPL accept that? Which value is returned when you enter x into the REPL now?
+4.8 Tuples
+Write some Scala expressions for tuples. Try them in the Scala REPL.
+
+Solution: Tuples
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------
+
+4.9 Lists
+Write some Scala expressions to build lists (the builtin Scala List type). Use the :: (cons) operator for some, and the List (...) form for others. Try your expressions in the Scala REPL.
+
+Solution: Lists
+
+
+
+
+
+
+
+
+
+
+
+
+4.10 Equality Testing
+Warning: Scala equality testing syntax conflicts with Java:
+
+Use == in Scala where you would use the equals method in Java, e.g., to test if two String instances contain the same characters.
+Use eq in Scala where you would use the == operator in Java, i.e., to test reference equality (that two references are pointing to the same instance).
+Run Scala expressions in the REPL to convince yourself that this is correct.
+
+Solution: Equality Testing
+
+
+
+
+
+
+
+
+
+-------------------------
+
+4.11 Factorial
+Write the factorial function in Scala and try it in the REPL.
+
+Then change your factorial function so that it prints out information about each recursive call as it happens.
+
+Solution: Factorial
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------
+
+4.12 Upto
+Try the following expression in the Scala REPL.
+
+(10 to 20).toList
+Write a Scala function upto that takes start and an end parameters (both of type Int), then returns a List[Int] of all Int between start and end (inclusive). That is, upto (start, end) should have the same result as (start to end).toList.
+
+Solution: Upto
+
+
+
+
+
+
+
+
+
+
+-------------------
+
+4.13 Repeat
+Write a Scala function that takes an element and repeats it a given number of times.
+
+It should work as follows:
+
+scala> repeat ("hello", 5)
+res0: List[String] = List(hello, hello, hello, hello, hello)
+
+scala> repeat (13, 5)
+res1: List[Int] = List(13, 13, 13, 13, 13)
+Solution: Repeat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------
+
+4.14 Recursive List Traversal
+Define a Scala function printCounter that prints out each element of a list on its own line with a counter. The function must be written using recursion. You can create additional auxiliary functions if you like.
+
+The output should resemble:
+
+scala> printCounter (List ("the", "rain", "in", "spain"))
+[001] the
+[002] rain
+[003] in
+[004] spain
+Recursive List Traversal
+
+4.15 Analyzing Functions
+Consider the following Scala code:
+
+def f [X] (xs:List[X]) : List[X] = {
+  xs match {
+    case Nil => Nil
+    case y::ys => y::(y::(f (ys)))
+  }
+}
+Our goal is to describe the effect of this function in words.
+
+Develop some intuition for its effect by working out on paper:
+
+the result of running f on a list of length 0 (there are not many!)
+the result of running f on a list of length 1
+the result of running f on a list of length 2
+the result of running f on a list of length 3
+Confirm your results using the Scala REPL.
+
+Notice that if your choice of a list of length 1 is List (5) (say), then you can use that result when working out the result of running f on List (4, 5), because it recursively calls to f (List (5)). This breaks your analysis into smaller, simpler pieces.
+
+With these results, and the intuition you have developed, what do you think the function does? Look at the code again to confirm your intuition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------

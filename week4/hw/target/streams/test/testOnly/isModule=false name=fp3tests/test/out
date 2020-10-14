@@ -1,0 +1,11 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mfp3tests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX01 - member[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX02 - allEqual[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX03 - stringLengths[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX04 - delete1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX05 - delete2[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX06 - delete3[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX07 - removeDupes1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX08 - removeDupes2[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX09 - splitAt[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- EX10 - allDistinct[0m[0m

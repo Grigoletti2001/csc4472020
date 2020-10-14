@@ -1,0 +1,523 @@
+2 Java
+2.1 Statements vs Expressions in Java
+Java's syntax borrows heavily from C, but does it support the comma and ternary operators?
+
+Write your own simple Java program(s) to determine whether Java supports the comma and ternary operators.
+
+Solution: Statements vs Expressions
+
+2.2 Prerequisite Material: While Loops, For Loops, Iterators, and Recursion
+The following Java program shows how to compute the sum of integers specified on the command line. You should already be familiar with each of these, but if not, check your Java textbook.
+
+public class Linear {
+
+  static int sumWhile (int[] data) {
+    int result = 0;
+    int i = 0; 
+    while (i < data.length) {
+      result += data[i];
+      i++;
+    }
+    return result;
+  }
+
+
+  static int sumFor (int[] data) {
+    int result = 0;
+    for (int i = 0; i < data.length; i++) {
+      result += data[i];
+    }
+    return result;
+  }
+
+
+  static int sumIterator (int[] data) {
+    int result = 0;
+    for (int x : data) {
+      result += x;
+    }
+    return result;
+  }
+
+
+  static int sumRecursive (int[] data) {
+    return sumRecursiveAux (data, 0);
+  }
+
+  static int sumRecursiveAux (int[] data, int i) {
+    if (i == data.length) {
+      return 0;
+    } else {
+      return data[i] + sumRecursiveAux (data, i + 1);
+    }
+  }
+
+
+  public static void main (String[] args) {
+    int[] data = new int[args.length];
+    for (int i = 0; i < args.length; i++) {
+      data[i] = Integer.parseInt (args[i]);
+    }
+
+    System.out.printf ("sumWhile     = %d%n", sumWhile (data));
+    System.out.printf ("sumFor       = %d%n", sumFor (data));
+    System.out.printf ("sumIterator  = %d%n", sumIterator (data));
+    System.out.printf ("sumRecursive = %d%n", sumRecursive (data));
+  }
+}
+$ javac Linear.java 
+
+$ java Linear 1 2 3 4
+sumWhile     = 10
+sumFor       = 10
+sumIterator  = 10
+sumRecursive = 10
+2.3 Linked Lists in Java
+Consider the following Java program using (singly) linked lists containing int elements. Replace the comments with code, so that they calculate the sum of the command-line arguments. You should use a while loop, a for loop, and a recursive method respectively.
+
+public class LinkedList {
+
+  static class Node {
+    int item;
+    Node next;
+
+    public Node (int item, Node next) { 
+      this.item = item; 
+      this.next = next; 
+    }
+  }
+
+
+  static int sumWhile (Node data) {
+    int result = 0;
+    /* TODO */
+    return result;
+  }
+
+
+  static int sumFor (Node data) {
+    int result = 0;
+    /* TODO */
+    return result;
+  }
+
+
+  static int sumRecursive (Node data) {
+    /* TODO */
+  }
+
+
+  public static void main (String[] args) {
+    Node data = null;
+    for (int i = args.length - 1; i >= 0; i--) {
+      data = new Node (Integer.parseInt (args[i]), data);
+    }
+
+    System.out.printf ("sumWhile     = %d%n", sumWhile (data));
+    System.out.printf ("sumFor       = %d%n", sumFor (data));
+    System.out.printf ("sumRecursive = %d%n", sumRecursive (data));
+  }
+}
+Solution: Linked List in Java
+
+
+
+
+
+
+
+
+
+--------------------
+
+3 C
+3.1 Linked Lists in C
+Consider the following C program using (singly) linked lists containing int elements. Replace the comments with code, so that they calculate the sum of the command-line arguments. You should use a while loop, a for loop, and a recursive method respectively.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+typedef struct node node;
+
+struct node {
+  int item;
+  node *next;
+};
+
+
+node *new_node (int item, node *next) {
+  node *result = (node*) malloc (sizeof (node));
+  if (!result) {
+    fprintf (stderr, "malloc failed");
+    exit (1);
+  }
+  result->item = item;
+  result->next = next;
+  return result;
+}
+
+
+int sum_while (node *data) {
+  int result = 0;
+  /* TODO */
+  return result;
+}
+
+
+int sum_for (node *data) {
+  int result = 0;
+  /* TODO */
+  return result;
+}
+
+
+int sum_recursive (node *data) {
+  /* TODO */
+}
+
+
+int main (int argc, char **argv) {
+  node *data = NULL;
+  for (int i = argc - 1; i >= 1; i--) {
+    data = new_node (atoi (argv[i]), data);
+  }
+
+  printf ("sum_while     = %d\n", sum_while (data));
+  printf ("sum_for       = %d\n", sum_for (data));
+  printf ("sum_recursive = %d\n", sum_recursive (data));
+}
+Solution: Linked List in C
+
+
+
+
+
+
+
+
+
+
+
+---------------------
+
+4 Scheme
+As you go through this section, it is recommended that you also refer to sections 2.1, 2.2, 2.3, 2.4 of The Scheme Programming Language, 4th Edition, by R. Kent Dybvig.
+
+4.1 Using Scheme Online
+Without installing anything, you can use BiwaScheme at https://repl.it/languages/scheme
+
+Note that BiwaScheme does not support rational numbers, so you should skip any example code that includes them.
+
+4.2 Installation
+If you want to install scheme at home, I recommend SISC Scheme.
+
+SISC Scheme is implemented on top of Java, so will run on Windows, Linux, OS X, etc.
+
+On Windows, get the zip file from http://sisc-scheme.org/ (get the "lite" or the "full" version).
+Uncompress the archive. To start the read-eval-print loop (REPL), run sisc.bat from the Command Prompt when your current working directory is the directory that contains the sisc.bat file.
+
+C:\Users\jriely\Downloads>dir
+...
+09/07/2017  04:02 PM         2,733,626 sisc-1.16.6.zip
+...
+
+C:\Users\jriely\Downloads>unzip sisc-1.16.6.zip
+Archive:  sisc-1.16.6.zip
+   creating: doc/
+...
+
+C:\Users\jriely\Downloads>dir
+...
+02/27/2007  11:42 AM    <DIR>          sisc-1.16.6
+...
+
+C:\Users\jriely\Downloads>erase sisc-1.16.6.zip
+
+C:\Users\jriely\Downloads>cd sisc-1.16.6
+
+C:\Users\jriely\Downloads\sisc-1.16.6>dir
+...
+02/27/2007  11:42 AM               363 sisc.bat  <== make sure this is here
+...
+
+C:\Users\jriely\Downloads\sisc-1.16.6>sisc.bat
+SISC (1.16.6)
+#;> (exit)
+
+C:\Users\jriely\Downloads\sisc-1.16.6>
+On Mac or Linux, use a package manager to do the install. On a mac, use homebrew. On Ubuntu, use apt-get.
+$ brew search scheme
+chibi-scheme
+mit-scheme
+sagittarius-scheme
+scheme48
+sisc-scheme
+$ brew install sisc-scheme
+==> Using the sandbox
+==> Downloading https://downloads.sourceforge.net/project/sisc/SISC%20Lite/1.16.6/sisc-lite-1.16.6.tar.gz
+Already downloaded: /Users/jriely/Library/Caches/Homebrew/sisc-scheme-1.16.6.tar.gz
+🍺  /usr/local/Cellar/sisc-scheme/1.16.6: 12 files, 589.1K, built in 1 second
+If the uparrow/downarrow/backspace keys are not working for you in the REPL, you can try using a readline wrapper, such as rlwrap.
+
+Here is the result of typing the uparrow before and after installing rlwrap.
+
+$ sisc
+SISC (1.16.6)
+#;> 1   
+1
+#;> ^[[A 
+
+$ brew install rlwrap
+$ sisc
+SISC (1.16.6)
+#;> 1
+1
+#;> 1
+1
+4.3 Arithmetic
+4.3.1 Examples
+Try running the following Scheme expressions in the SISC REPL (Read-Eval-Print-Loop).
+
+(+ 5 6)
+(* 3 (+ 5 6))
+(* (+ 5 6) 3)
+(* 2 3 4 5)
+4.3.2 Exercise
+Translate the arithmetic expression 10 / 2 + 3 * 2 into Scheme using the standard rules of precedence for arithmetic operators. Test your answer by running it in the Scheme interpreter.
+
+4.4 Strings
+4.4.1 Examples
+Try running the following Scheme expressions in the SISC REPL (Read-Eval-Print-Loop).
+
+"hello"
+(number->string 123)
+(string->number "123")
+(string->number "12x3")
+(string-append "hello" "world")
+(string-append "he" "ll" "o")
+(string-length "hello")
+(string->list "hello")
+(string-ref "hello" 1)
+4.4.2 Exercise
+Translate the following Java expression into Scheme. Then test your Scheme expression in the SISC REPL.
+
+(((1 + 2) * 3) + 4) + " = " + (16 - 3)
+Solution: Strings in Scheme
+
+
+
+
+
+
+
+
+
+-------------------------
+
+
+4.5 Functions
+4.5.1 Examples
+Try running the following Scheme expressions in the SISC REPL (Read-Eval-Print-Loop).
+
+Define a function f.
+
+(define (f n) (+ n 1))
+Invoke the function f on argument 10.
+
+(f 10)
+Redefine f.
+
+(define (f n) (+ n 2))
+Invoke f again.
+
+(f 10)
+Define a variable x.
+
+(define x 10)
+Invoke f on x.
+
+(f x)
+4.5.2 Exercise
+Define a Scheme function greet that takes a string s as an argument and returns the result of concatenating hello, a space, and the string s.
+
+Solution: Functions in Scheme
+
+
+
+
+
+
+
+
+--------------------
+
+4.6 Booleans and Conditionals
+4.6.1 Examples
+Try running the following Scheme expressions in the SISC REPL (Read-Eval-Print-Loop).
+
+The true and false Boolean values are written as #t and #f in Scheme. The and, or, and not functions operate on Boolean values in the usual way.
+
+(and #f #f)
+(and #t #f)
+(and #t #t)
+(or #t #f)
+(not #t)
+(not #f)
+The functions number? and string? can be used to whether an argument is a number or string respectively.
+
+(number? #f)
+(number? 5)
+(number? "5")
+(string? #f)
+(string? 5)
+(string? "5")
+The function = can be used to test equality of numbers. The usual inequality operators on numbers are also available as functions.
+
+(= 5 2)
+(= 2 2)
+(<= 5 2)
+(> 5 2)
+The function string=? can be used to test equality of strings. The lexicographic (dictionary order) operators are also available as functions.
+
+(string=? "hello" "world")
+(string<=? "hello" "world")
+(string<=? "hello" "he")
+The generic equality functions eq?, eqv?, and equal? can be used for numeric and string types as well as other types.
+
+(equal? 5 10)
+eq? is true when the arguments point to the same location in memory. It is useful for lists, where there is guaranteed to be a unique representation of the empty list in memory, but its behavior is implementation dependent on other types, so better to use eqv? rather than eq?.
+
+$ sisc
+SISC (1.16.6)
+#;> (eq? 0 0 )
+#f
+#;> (eqv? 0 0 )
+#t
+
+$ csi
+CHICKEN
+(c) 2008-2016, The CHICKEN Team
+(c) 2000-2007, Felix L. Winkelmann
+Version 4.11.0 (rev ce980c4)
+
+#;1> (eq? 0 0)
+#t
+#;2> (eqv? 0 0)
+#t
+The if special form takes three arguments. The first argument is evaluated. If it evaluates to the true value, then the second argument is evaluated, and its result is the value of the entire if expression. Otherwise, the third argument is evaluated, and its result is the value of the entire if expression.
+
+(if (= (+ 2 2) 4) "that's good" "that's strange")
+(string-append "that's " (if (= (+ 2 2) 4) "good" "strange"))
+4.6.2 Exercise
+Write a Scheme function check-password (note that hyphens are allowed as characters in Scheme identifiers!) that takes a string as a parameter. The function should return the string "pass, friend" if its parameter is equal to the password "Rosebud". Otherwise it should return the string "get out of here".
+
+Solution: Boolean and Conditionals in Scheme
+
+
+
+
+
+
+
+
+
+
+-----------
+
+4.7 Recursive Functions
+4.7.1 Examples
+Try running the following Scheme expressions in the SISC REPL (Read-Eval-Print-Loop).
+
+Notice that the body of the Scheme function is an expression (there are no statements in Scheme) and that there is no return keyword. This means that the if special form is like the ternary operator in expressions from C and Java, rather than the if-then-else control construct for statements in C and Java.
+
+(define (factorial n) 
+  (if (<= n 1)
+     1
+     (* n (factorial (- n 1)))))
+(factorial 5)
+(factorial 10)
+4.7.2 Exercise
+Define a Scheme function triangle that finds the nth triangular number, i.e.,
+
+(triangle 0) returns 0 = 0
+(triangle 1) returns 1 = 0+1
+(triangle 2) returns 3 = 0+1+2
+(triangle 3) returns 6 = 0+1+2+3
+(triangle 4) returns 10 = 0+1+2+3+4
+Solution: Recursive Functions in Scheme
+
+
+
+
+
+
+
+
+
+
+
+
+--------------
+
+4.8 Linked Lists
+4.8.1 Examples
+Try running the following Scheme expressions in the SISC REPL (Read-Eval-Print-Loop).
+
+()
+cons
+(cons 3)
+(cons 3 ())
+(cons 2 (cons 3 ()))
+(cons 1 (cons 2 (cons 3 ())))
+(quote (1 2 3))
+'(1 2 3)
+(list 1 2 3)
+(list 1 (+ 1 1) 3)
+'(1 (+ 1 1) 3)
+(append '(1 2) '(3 4 5))
+(cons 0 (append '(1 2) '(3 4 5)))
+(length (cons 10 (cons 11 (cons 12 ()))))
+(length '(10 11 12))
+(car '(1 2 3))
+(cdr '(1 2 3))
+(car (cdr '(1 2 3)))
+(cadr '(1 2 3))
+(reverse '(1 2 3))
+4.8.2 Exercise
+Write 10 different Scheme expressions that evaluate to the list of numbers 10, 11, 12, 13.
+
+Solution: Linked Lists in Scheme
+
+
+
+
+
+
+
+
+
+
+
+
+--------
+4.9 Recursive Functions Over Linked Lists
+4.9.1 Examples
+Try running the following Scheme expressions in the SISC REPL (Read-Eval-Print-Loop).
+
+(define (my-length l) 
+  (if (equal? l ())
+     0
+     (+ 1 (my-length (cdr l)))))
+(my-length '(10 11 12 13))
+4.9.2 Exercise
+Define a Scheme function sum that sums the numbers in a list. Your function should use recursion.
+
+
+
+
+
+
+
+------------
+
